@@ -1,0 +1,10 @@
+<div class="access-button">
+    <ng-container *ngIf="tooltipContent['content'] !== ''">
+        <div class="access-button-tooltip" #tooltip="matTooltip"
+            [matTooltip]="tooltipContent['content']" 
+            [matTooltipPosition]="tooltipContent['pos']"
+            matTooltipClass="{{ tooltipContent['cls'] }}"
+        ></div>
+    </ng-container>
+    <ng-content select="[content]"></ng-content>
+</div>

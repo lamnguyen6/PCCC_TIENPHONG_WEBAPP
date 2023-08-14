@@ -1,0 +1,67 @@
+@import "src/scss/mixins";
+
+:host {
+    @keyframes intro-text {
+        from {
+            color: var(--color-black);
+        }
+        to {
+            color: var(--color-white);
+        }
+    }
+    @keyframes intro-bg {
+        from {
+           @include transform(translateY(100%));
+        }
+        to {
+           @include transform(translateY(0));
+        }
+    }
+    @keyframes intro {
+        from {
+           opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+    }
+    .intro {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        @include flexAJ(center, center);
+        @include animation(intro 0.1s ease-out 1s forwards);
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            background-color: var(--color-black);
+            @include animation(intro-bg 0.3s linear 0.3s both);
+        }
+    }
+    .bev-greeting {
+        opacity: .5;
+        z-index: 0;
+        text-align: center;
+        color: var(--color-white);
+        @include animation(intro-text 0.1s ease 0.45s both);
+    }
+    h1 {
+        letter-spacing: 5px;
+        line-height: 40px;
+        font-weight: 100;
+        font-style: italic;
+        font-size: 16px;
+        span {
+            font-size: 25px;
+        }
+    }
+}

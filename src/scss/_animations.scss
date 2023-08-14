@@ -1,0 +1,31 @@
+@import "./mixins";
+
+@keyframes entrance--float-up {
+    from {
+        opacity: 0;
+        @include transform(translateY(20px));
+    }
+}
+@keyframes entrance--float-down {
+    from {
+        opacity: 0;
+        @include transform(translateY(-20px));
+    }
+}
+@keyframes entrance--float-left {
+    from {
+        opacity: 0;
+        @include transform(translateX(20px));
+    }
+}
+@keyframes entrance--float-right {
+    from {
+        opacity: 0;
+        @include transform(translateX(-20px));
+    }
+}
+@keyframes entrance--fadeIn {
+    from {
+        opacity: 0;
+    }
+}

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+// Libraries
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+// Local Stylings
+@import "./scss/fonts";
+@import "./scss/responsive";
+@import "./scss/animations";
+@import "./scss/global";
+@import "./scss/common";
+@import "./scss/variables";
+ 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

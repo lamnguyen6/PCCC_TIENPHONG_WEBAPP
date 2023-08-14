@@ -1,0 +1,22 @@
+@import "./palette";
+
+:root {
+    --color-primary: #{color(primary, A)};
+    --color-primary-light: #{color(primary, A1)};
+    --color-primary-dark: #{color(primary, A2)};
+
+    --color-secondary: #{color(secondary, A)};
+    --color-secondary-light: #{color(secondary, A1)};
+    --color-secondary-dark: #{color(secondary, A2)};
+
+    --color-black: #{color(black, A)};
+    --color-black-light: #{color(black, A1)};
+
+    --color-base: #{color(base, A)};
+    --color-white: snow;
+
+    --color-negative: #{color(primary, A3)};
+    --color-positive: #{color(green, A)};
+}
+
+

@@ -1,0 +1,53 @@
+@import "src/scss/mixins";
+
+:host {
+    .access-button {
+        position: fixed;
+        z-index: 99;
+        bottom: 50px;
+        right: 50px;
+        @include flexAJ(center, center);
+        width: 50px;
+        height: 50px;
+        background-color: #5265bc;
+        @include box-shadow(0 0 10px 0 var(--color-black-light));
+        color: var(--color-white);
+        @include border-radius(50%);
+        &:hover {
+            cursor: pointer;
+            @include transform(scale(1.02));
+            @include transition(.2s);
+            // background-color: var(--color-white);
+            color: var(--color-primary);
+            @include box-shadow(0 0 10px 0 #7d0002bd);
+        }
+        &-tooltip {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+    }
+    ::ng-deep {
+        .access-zalo {
+            img {
+                width: 50px;
+            }
+        }
+        .access-call {
+            img {
+                width: 50px;
+            }
+        }
+        .access-fb {
+            font-weight: 900;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+            color: var(--color-white);
+        }
+        .mat-tooltip {
+            background: var(--color-black-light);
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import "src/scss/mixins";
+
+:host {
+    %activeNavItem {
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+    .header {
+        width: 100%;
+        padding: 0 16px;
+        @include flexAJ(center, flex-start);
+        @include --flexWrap(wrap);
+    }
+    .logo {
+        padding-right: 30px;
+        padding-top: 5px;
+        @include flex(0, 0, auto);
+        a {
+            img {
+                width: 60px;
+            }
+        }
+    }
+    .nav {
+        @include flex(1);
+        @include flexAJ(center, flex-end);
+    }
+    .menu-desktop {
+        ul {
+            @include flexAJ(center, flex-start);
+            li {
+                padding: 5px 10px;
+                
+            }
+        }
+    }
+    .menu-mobile-btn, .menu-desktop {
+        a {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-black-light);
+            @extend %activeNavItem;
+        }
+    }
+    .menu-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        .backdrop {
+            z-index: 101;
+        }
+        .close-btn {
+            opacity: 1;
+            z-index: 102;
+            top: 34px;
+            left: 254px; 
+        }
+        &__wrap {
+            @include animation(entrance--float-right .2s linear .2s both);
+            position: fixed;
+            z-index: 102;
+            width: 300px;
+            height: 100vh;
+            padding: 20px 0;
+            overflow-y: auto;
+            background-color: var(--color-white);
+        }
+        &__top {
+            padding: 0 16px;
+            .logo-mini {
+                font-size: 16px;
+                font-weight: 300;
+                color: var(--color-black);
+                text-transform: uppercase;
+                line-height: 60px;
+            }
+        }
+        &__content {
+            ul {
+                li {
+                    width: 100%;
+                    padding: 8px 16px;
+                    a {
+                        font-size: 16px;
+                        font-weight: 300;
+                        text-transform: capitalize;
+                        letter-spacing: 1px;
+                        color: var(--color-black);
+                        @extend %activeNavItem;
+                    }
+                }
+            }
+        }
+    }
+}

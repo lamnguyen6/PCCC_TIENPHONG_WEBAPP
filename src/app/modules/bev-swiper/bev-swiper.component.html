@@ -1,0 +1,20 @@
+<!-- <ng-container *ngIf="componentActive"> -->
+    <ng-container *ngIf="datasrc && datasrc.length">
+        <div class="carousel-inner rounded-5 shadow-4-strong">
+            <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+                <ng-container *ngFor="let item of datasrc">
+                    <mdb-carousel-item>
+                        <div class="bev-swiper-item">
+                            <img
+                                [src]="item['src']"
+                                class="d-block w-100"
+                                alt="{{ item['link'] }}"
+                            />
+                            <a [href]="item['link']"></a>
+                        </div>
+                    </mdb-carousel-item>
+                </ng-container>
+            </mdb-carousel>
+        </div>
+    </ng-container>
+<!-- </ng-container> -->

@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul, ol, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.container {
+    width: 100%;
+    padding: 16px;
+    margin: 0 auto;
+    
+    @media (min-width: 576px) {
+        width: 540px;
+    }
+    @media (min-width: 768px) {
+        width: 720px;
+    }
+    @media (min-width: 992px){
+        width: 960px;
+    }
+    @media (min-width: 1200px){
+        width: 1080px;
+    }
+    @media (min-width: 1300px) {
+        width: 1200px;
+    }
+}

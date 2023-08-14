@@ -1,0 +1,105 @@
+<div class="home-page" #scrollContainer>
+    <div class="decor-bg">
+        <img class="decor-logo" src="/assets/images/logo/logo.png" alt="">
+        <div 
+            #animatedElement idleOnScroll [animationFunction]="animateIdleWithSpeed"
+            [scrollContainer]="scrollContainer"
+            class="decor-1 icon-svg icon-svg-fire-extinguisher-border-line"
+        ></div>
+    </div>
+    <app-header></app-header>
+    <!-- dashboard -->
+    <div id="dashboard" class="section-dashboard pane">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="left-section d-desktop">
+                    <ul class="list-of-services">
+                        <li class="category"><a href="#">Sản phẩm</a></li>
+                        <li><a href="#">Đăng ký lắp đặt PCCC</a></li>
+                        <li><a href="#">Vật tư cứu hỏa</a></li>
+                        <li><a href="#">Camera chống trộm</a></li>
+                        <li><a href="#">Thiết bị báo trộm</a></li>
+                        <li><a href="#">Thiết bị báo cháy</a></li>
+                        <li><a href="#">Thiết bị cứu hỏa Woosung</a></li>
+                        <li><a href="#">Bình PCCC</a></li>
+                        <li><a href="#">Bình bột PCCC</a></li>
+                        <li class="category"><a href="#">Dịch vụ</a></li>
+                        <li><a>Lắp đặt hệ thống PCCC tại nhà</a></li>
+                        <li><a>Nạp bình cứu hỏa</a></li>
+                        <li><a>Bảo trì hệ thống PCCC</a></li>
+                    </ul>
+                </div>
+                <div class="right-section">
+                    <div class="banner" id="main-banner">
+                        <app-bev-swiper #mainBannerCmp [src]="mainBanners"></app-bev-swiper>
+                    </div>
+                    <div class="about-us d-desktop">
+                        <h3><a href="#">Công ty PCCC Tiên Phong</a> - Giải Pháp An Toàn Chuyên Nghiệp</h3>
+                        <p><a color="primary" href="#">PCCC Tiên Phong</a> là một công ty chuyên cung cấp trang thiết bị phòng cháy chữa cháy uy tín, được thành lập vào năm 2023 và có trụ sở tại thành phố Tuyên Quang, Việt Nam. Với cam kết đảm bảo an toàn cho cộng đồng, <a color="primary" href="#">Tiên Phong</a> đã nhanh chóng xây dựng mục tiêu trở thành tổng kho cung cấp vật tư phòng cháy chữa cháy cho toàn bộ khu vực Tây Bắc, Việt Nam.
+                        <p>Tầm nhìn của <a color="primary" href="#">PCCC Tiên Phong</a> là trở thành <span color="secondary">một đơn vị hàng đầu trong lĩnh vực phòng cháy chữa cháy, mang đến những giải pháp an toàn chuyên nghiệp, hiệu quả và đáng tin cậy cho các khách hàng và đối tác</span>. Chúng tôi cam kết cung cấp sản phẩm và dịch vụ chất lượng cao, đồng thời đảm bảo giá cả hợp lý và dịch vụ hậu mãi tận tâm.</p>
+                    </div>
+                    <div class="product">
+                        <h3>Sản Phẩm Nổi Bật</h3>
+                        <div class="product-list">
+                            <ng-container *ngFor="let item of productList">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img [src]="item['img']" alt="">
+                                    </div>
+                        
+                                    <div class="card-content">
+                        
+                                        <h2 class="card-title">{{ item['title'] }}</h2>
+                        
+                                        <div class="card-price">
+                                            Giá : {{ item['price'] }}
+                                        </div>
+                        
+                                        <a class="card-submit" href="#">Mua ngay</a>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of dashboard -->
+
+    <!-- news -->
+    <div id="news" class="section-news pane">
+        <h1 class="section-title">Cẩm nang PCCC / Tin tức</h1>
+    </div>
+    <!-- end of news -->
+    <app-footer></app-footer>
+</div>
+<div class="access-btn">
+    <div class="access-btn-zalo">
+        <app-access-button [tooltip]="{ content: 'Kết nối qua Zalo', pos: 'right' }">
+            <ng-container content>
+                <a class="access-zalo" href="tel:0976839054">
+                    <img src="/assets/images/contact/zalo.png" alt="0976839054">
+                </a>
+            </ng-container>
+        </app-access-button>
+    </div>
+    <div class="access-btn-fb">
+        <app-access-button [tooltip]="{ content: 'Facebook', pos: 'right' }">
+            <ng-container content>
+                <a class="access-fb" href="tel:0976839054">
+                    f
+                </a>
+            </ng-container>
+        </app-access-button>
+    </div>
+    <div class="access-btn-call">
+        <app-access-button [tooltip]="{ content: 'Liên hệ trực tiếp', pos: 'right' }">
+            <ng-container content>
+                <a class="access-call" href="tel:0976839054">
+                    <img src="/assets/images/contact/call.png" alt="0976839054">
+                </a>
+            </ng-container>
+        </app-access-button>
+    </div>
+</div>

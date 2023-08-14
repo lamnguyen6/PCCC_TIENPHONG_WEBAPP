@@ -1,0 +1,296 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    h1.section-title {
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--color-black-light);
+        text-align: center;
+        width: 100%;
+    }
+    .home-page {
+        min-height: 100vh;
+    }
+    // =======DASHBOARD======= //
+    .section-dashboard {
+        padding-top: 40px;
+        .section {
+            &-wrap {
+                @include flexAJ();
+                .left-section {
+                    width: 300px;
+                    @include flex(0, 0, auto);
+                    padding: 0 10px;
+                }
+                .right-section {
+                    @include flex(1, 1, 1);
+                    padding: 0 10px;
+                }
+            }
+        }
+        .list-of-services {
+            li {
+                position: relative;
+                width: 100%;
+                margin-bottom: 10px;
+                
+                @include border-radius(30px);
+                a {
+                    display: block;
+                    line-height: 38px;
+                    color: var(--color-white);
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding-left: 20px;
+                    
+                }
+                &:not(.category) {
+                    background-color: var(--color-primary);
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        @include box-shadow(0px 0px 15px 5px #7d0002bd);
+                        opacity: .4;
+                        @include border-radius(30px);
+                    }
+                    
+                    &:hover {
+                        cursor: pointer;
+                        @include transform(scale(1.05));
+                        @include transition(.3s ease);
+                        background-color: var(--color-white);
+                        a {
+                            color: var(--color-primary-dark);
+                        }
+                        &:before {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                &.category {
+                    a {
+                        font-weight: 900;
+                        font-size: 25px;
+                        color: var(--color-black-light);
+                    }
+                }
+            }
+        }
+        .banner {
+            margin-bottom: 30px;
+        }
+        .about-us {
+            text-align: justify;
+            h3 {
+                a {
+                    color: var(--color-black);
+                }
+            }
+            p {
+                font-size: 16px;
+                color: var(--color-black);
+            }
+        }
+        .product {
+            margin: 30px 0;
+            &-list {
+                @include flexAJ();
+                @include --flexWrap();
+                gap: 20px;
+            }
+        }
+        // ======= CARD ====== //
+        .card {
+            $card: '.card';
+            $transition-time: .4s;
+            position: relative;
+            max-width: 250px;
+            width: 100%;
+            height: 350px;
+            background: var(--color-black-light);
+            border-radius: 20px;
+            overflow: hidden;
+            @include box-shadow(0 0 8px 0 black);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--color-primary);
+                clip-path: circle(120px at 80% 10%);
+                transition: $transition-time ease-in-out;
+            }
+            &::after {
+                content: "PCCC";
+                position: absolute;
+                top: 55%;
+                left: -9%;
+                font-size: 120px;
+                font-weight: 900;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.04);
+            }
+            &-img {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1000;
+                width: 100%;
+                height: 100%;
+                transition: $transition-time;
+                img {
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(20deg);
+                    width: 130px;
+                }
+            }
+            &-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100px;
+                text-align: center;
+                transition: #{ $transition-time * 2 };
+                z-index: 90;
+            }
+            &-title {
+                position: relative;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 1px;
+                color: var(--color-white);
+                padding: 0 16px;
+            }
+            &-price {
+                @include flexAJ(center, center);
+                padding: 8px 20px;
+                transition: $transition-time;
+                opacity: 0;
+                visibility: hidden;
+
+                color: var(--color-white);
+                font-weight: 300;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-right: 10px;
+            }
+            &-submit {
+                display: inline-block;
+                padding: 10px 20px;
+                background: var(--color-primary);
+                border-radius: 4px;
+                margin-top: 10px;
+                text-decoration: none;
+                font-weight: 600;
+                color: var(--color-white);
+                opacity: 0;
+                transform: translateY(50px);
+                transition: $transition-time;
+            }
+            &:hover {
+                cursor: pointer;
+                &::before {
+                    top: -120px;
+                    clip-path: circle(280px at 80% -10%);
+                }
+                #{ $card }-img {
+                    top: 0%;
+                    transform: translateY(-25%);
+                    /* bug  */
+                }
+                #{ $card }-content {
+                    height: 180px;
+                }
+                #{ $card }-price {
+                    opacity: 1;
+                    visibility: visible;
+                    transition-delay: .3s;
+                }
+                #{ $card }-submit {
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition-delay: .4s;
+                }
+            }
+        }
+        // ======= CARD ====== //
+    }
+    // =======DASHBOARD======= //
+
+    // =======NEWS======= //
+    .section-news {
+        margin: 40px 0;
+        padding: 0 16px;
+    }
+    // =======NEWS======= //
+
+    // =======DECOR======= //
+    .decor {
+        &-bg {
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+        &-logo {
+            width: 60vw;
+            height: 80vh;
+            position: absolute;
+            top: 0;
+            right: -30vw;
+            filter: invert(1);
+            opacity: .1;
+        }
+        &-1 {
+            width: 60vw;
+            height: 80vh;
+            position: absolute;
+            top: 0;
+            left: -30vw;
+            opacity: .2;
+            &.icon-svg {
+                background: var(--color-primary);
+            }
+            @include phone {
+                display: none;
+            }
+        }
+    }
+    // =======DECOR======= //
+
+    // =======Child Cmp======= //
+    ::ng-deep .access-btn {
+        &-call {
+            .access-button {
+                background-color: var(--color-positive) !important;
+                bottom: 50px !important;
+            }
+        }
+        &-zalo {
+            .access-button {
+                bottom: 120px !important;
+            }
+        }
+        &-fb {
+            .access-button {
+                bottom: 190px !important;
+            }
+        }
+    }
+    // =======Child Cmp======= //
+    
+}
