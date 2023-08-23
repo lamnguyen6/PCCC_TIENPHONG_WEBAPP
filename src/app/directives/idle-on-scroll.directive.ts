@@ -27,9 +27,8 @@ export class IdleOnScrollDirective {
     }
   }
   private calculateScrollSpeed(): number {
-    console.log(`calculateScrollSpeed`, this.scrollContainer.dataset['scrollTop'] = );
     const previousScrollTop = Number(this.scrollContainer.dataset['scrollTop']) || 0;
-    const currentScrollTop = this.scrollContainer.scrollTop;
+    const currentScrollTop = window.scrollY;
     const scrollSpeed = Math.abs(currentScrollTop - previousScrollTop);
     this.scrollContainer.dataset['scrollTop'] = currentScrollTop.toString();
     return scrollSpeed;

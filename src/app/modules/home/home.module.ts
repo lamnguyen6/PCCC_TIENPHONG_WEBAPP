@@ -26,7 +26,6 @@ const routes: Routes = [
     HeaderModule,
     BevSwiperModule,
     FooterModule,
-    FloatingContentModule,
     DirectivesModule,
   ],
 })

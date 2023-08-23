@@ -11,12 +11,16 @@
 
     --color-black: #{color(black, A)};
     --color-black-light: #{color(black, A1)};
+    --color-black-disabled: #{color(black, A2)};
 
     --color-base: #{color(base, A)};
     --color-white: snow;
 
     --color-negative: #{color(primary, A3)};
     --color-positive: #{color(green, A)};
+    --color-hl: #{color(highlight, A)};
+    --color-quote: #{color(green, A3)};
+    --color-quote-bg: #{color(green, A4)};
 }
 
 

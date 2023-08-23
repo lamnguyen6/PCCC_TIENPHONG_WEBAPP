@@ -1,43 +1,71 @@
 <div class="header">
-    <div class="logo"><a href="#">
-        <img src="/assets/images/logo/logo.png" alt="Tien Phong PCCC">
-    </a></div>
-    <div class="nav">
-        <div class="menu-desktop d-desktop">
-            <ul>
-                <li><a href="#">trang chủ</a></li>
-                <li><a href="#">giới thiệu</a></li>
-                <li><a href="#">sản phẩm</a></li>
-                <li><a href="#">dịch vụ</a></li>
-                <li><a href="#">liên hệ</a></li>
-                <li><a href="#">cẩm nang pccc</a></li>
-            </ul>
+    <div class="header-section1 container">
+        <div class="logo">
+            <a [routerLink]="['']"><img src="/assets/images/logo/logo.png" alt="Tien Phong PCCC"></a>
         </div>
-        <div class="menu-mobile-btn d-device">
-            <a href="javascript:void(0)" (click)="toggleMobileMenuFlag = !toggleMobileMenuFlag">danh mục</a>
-        </div>
-        <div class="search-box"></div>
-        <ng-container *ngIf="toggleMobileMenuFlag">
-            <div class="menu-mobile">
-                <div class="backdrop" (click)="toggleMobileMenuFlag = false"></div>
-                <div class="menu-mobile__wrap">
-                    <div class="menu-mobile__top">
-                        <div class="logo-mini"><a href="#">PCCC TienPhong</a></div>
-                        <div class="close-btn" (click)="toggleMobileMenuFlag = false"></div>
-                    </div>
-                    <div class="menu-mobile__content">
-                        <ul>
-                            <li><a href="#">trang chủ</a></li>
-                            <li><a href="#">giới thiệu</a></li>
-                            <li><a href="#">sản phẩm</a></li>
-                            <li><a href="#">dịch vụ</a></li>
-                            <li><a href="#">liên hệ</a></li>
-                            <li><a href="#">cẩm nang pccc</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-mobile__bottom"></div>
-                </div>
+        <div class="contact-1 d-desktop">
+            <h5>Tổng kho thiết bị PCCC #1 Tây Bắc</h5>
+            <div class="search-box">
+                <input type="text" placeholder="Nhập từ khóa tìm kiếm">
+                <mat-icon aria-hidden="false" fontIcon="search"></mat-icon>
             </div>
-        </ng-container>
+        </div>
+        <div class="contact-2 d-desktop">
+            <mat-icon aria-hidden="false" fontIcon="perm_phone_msg"></mat-icon>
+            <a href="tel:+84976839054">Phòng kinh doanh: <span color="primary">0976 839 054</span></a>
+            <a href="#"><span color="primary">ctytienphongtq@gmail.com</span></a>
+        </div>
+        <div class="contact-3 d-device">
+            <mat-icon aria-hidden="false" fontIcon="perm_phone_msg"></mat-icon>
+            <a href="tel:+84976839054">Phòng kinh doanh: <span color="primary">0976 839 054</span></a>
+            <a href="tel:+84976839054">Hỗ trợ kỹ thuật: <span color="primary">0976 839 054</span></a>
+            <a href="#"><span color="primary">ctytienphongtq@gmail.com</span></a>
+        </div>
+        <div class="contact-4 d-desktop">
+            <mat-icon aria-hidden="false" fontIcon="perm_phone_msg"></mat-icon>
+            <a href="tel:+84976839054">Hỗ trợ kỹ thuật: <span color="primary">0976 839 054</span></a>
+            <a href="#"><span color="primary">ctytienphongtq@gmail.com</span></a>
+        </div>
+        <a href="javascript:void(0)" (click)="toggleMobileMenuFlag = !toggleMobileMenuFlag" class="menu-mobile-btn d-device">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <div class="header-section2 d-desktop">
+        <div class="nav">
+            <div class="menu-desktop">
+                <ul>
+                    <li><a [routerLink]="['']">trang chủ</a></li>
+                    <li><a [routerLink]="['/gioi-thieu']">giới thiệu</a></li>
+                    <li><a [routerLink]="['']">sản phẩm</a></li>
+                    <li><a [routerLink]="['']">dịch vụ</a></li>
+                    <li><a [routerLink]="['/lien-he']">liên hệ</a></li>
+                    <li><a [routerLink]="['']">cẩm nang pccc</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
+<ng-container *ngIf="toggleMobileMenuFlag">
+    <div class="menu-mobile">
+        <div class="backdrop" (click)="toggleMobileMenuFlag = false"></div>
+        <div class="menu-mobile__wrap">
+            <div class="menu-mobile__top">
+                <div class="logo-mini"><a href="#">PCCC TienPhong</a></div>
+                <div class="close-btn" (click)="toggleMobileMenuFlag = false"></div>
+            </div>
+            <div class="menu-mobile__content">
+                <ul>
+                    <li><a [routerLink]="['']">trang chủ</a></li>
+                    <li><a [routerLink]="['/gioi-thieu']">giới thiệu</a></li>
+                    <li><a [routerLink]="['']">sản phẩm</a></li>
+                    <li><a [routerLink]="['']">dịch vụ</a></li>
+                    <li><a [routerLink]="['/lien-he']">liên hệ</a></li>
+                    <li><a [routerLink]="['']">cẩm nang pccc</a></li>
+                </ul>
+            </div>
+            <div class="menu-mobile__bottom"></div>
+        </div>
+    </div>
+</ng-container>

@@ -1,16 +1,37 @@
+@import "src/scss/responsive";
 @import "src/scss/mixins";
 
 :host {
     %activeNavItem {
         &:hover {
-            color: var(--color-primary);
+            color: var(--color-hl) !important;
         }
     }
     .header {
         width: 100%;
-        padding: 0 16px;
-        @include flexAJ(center, flex-start);
-        @include --flexWrap(wrap);
+        &-section1 {
+            @include flexAJ(center, center);
+            @include --flexWrap(wrap);
+            .logo {
+                justify-self: flex-start;
+                margin-right: auto;
+            }
+            > div:not(.logo):not(.menu-mobile-btn) {
+                margin: 10px 20px;
+                &.contact-4 {
+                    margin-right: 0;
+                }
+                &.contact-3 {
+                    @include phone {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+        &-section2 {
+            background-color: var(--color-primary);
+        }
     }
     .logo {
         padding-right: 30px;
@@ -18,31 +39,47 @@
         @include flex(0, 0, auto);
         a {
             img {
-                width: 60px;
+                width: 100px;
             }
         }
     }
     .nav {
         @include flex(1);
-        @include flexAJ(center, flex-end);
+        @include flexAJ(center, center);
+    }
+    .menu-mobile-btn {
+        position: relative;
+        margin-right: 0;
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-black-light);
+        @include flexAJ(center, center);
+        @include --flexDir(column);
+        @include border-radius(5px);
+        span {
+            background-color: var(--color-white);
+            width: 25px;
+            height: 3px;
+            margin-bottom: 3px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
     .menu-desktop {
         ul {
             @include flexAJ(center, flex-start);
             li {
-                padding: 5px 10px;
-                
+                padding: 10px 20px;
+                a {
+                    font-size: 16px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: var(--color-white);
+                    @extend %activeNavItem;
+                }
             }
-        }
-    }
-    .menu-mobile-btn, .menu-desktop {
-        a {
-            font-size: 16px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--color-black-light);
-            @extend %activeNavItem;
         }
     }
     .menu-mobile {
@@ -51,7 +88,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 100;
+        z-index: 10000;
         .backdrop {
             z-index: 101;
         }
@@ -95,6 +132,44 @@
                         @extend %activeNavItem;
                     }
                 }
+            }
+        }
+    }
+    .contact {
+        &-1 {
+            h5 {
+                margin: 0 0 10px;
+                letter-spacing: 1px;
+                color: var(--color-black);
+                font-size: 14px;
+                font-weight: 300;
+            }
+            .search-box {
+                margin-top: 10px;
+            }
+        }
+        &-2, &-3, &-4 {
+            $w: 50px;
+
+            padding-left: $w;
+            position: relative;
+            ::ng-deep mat-icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: $w;
+                height: 50px;
+                line-height: 50px;
+                font-size: 40px;
+                color: var(--color-black-light);
+            }
+            a {
+                display: block;
+                font-size: 14px;
+                color: var(--color-black);
+                font-weight: 300;
+                word-spacing: 1px;
+                margin-bottom: 3px;
             }
         }
     }

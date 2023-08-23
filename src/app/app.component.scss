@@ -1,0 +1,22 @@
+:host {
+    ::ng-deep .access-btn {
+        $s: 50px;
+        $center: calc(50vh - #{ $s / 2 });
+        &-call {
+            .access-button {
+                background-color: var(--color-positive) !important;
+                bottom: calc(#{ $center } - 70px) !important;
+            }
+        }
+        &-zalo {
+            .access-button {
+                bottom: $center !important;
+            }
+        }
+        &-fb {
+            .access-button {
+                bottom: calc(#{ $center } + 70px) !important;
+            }
+        }
+    }
+}

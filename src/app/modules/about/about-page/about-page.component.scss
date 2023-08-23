@@ -1,0 +1,99 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    .about-page {
+        overflow-x: hidden;
+    }
+    h3 {
+        color: var(--color-black-light);
+        @include flexAJ(center, center);
+        @include --flexWrap();
+        @include --flexDir(column);
+        font-weight: 700;
+        font-size: 25px;
+        margin-top: 0;
+        letter-spacing: 1px;
+        @include desktop {
+            margin: 30px 0;
+            @include --flexDir(row);
+            font-size: 30px;
+            font-weight: 900;
+        }
+        span {
+            &:nth-child(2) {
+                margin: 0 10px;
+            }
+        }
+    }
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--color-black-light);
+        margin-bottom: 20px;
+        text-align: justify;
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+    .quote {
+        @include flexAJ(center, center);
+        gap: 30px;
+        position: relative;
+        @include desktop {
+            margin-bottom: 20px;
+        }
+        img {
+            z-index: -1;
+            @include phone {
+                display: none;
+            }
+            @include tablet {
+                width: 50%;
+                position: absolute;
+                left: -20%;
+            }
+            @include desktop {
+                width: 50%;
+                position: absolute;
+                left: -20%;
+            }
+            @include lg-desktop {
+                width: 50%;
+                position: static;
+            }
+        }
+        p {
+            display: block;
+            padding: 30px 30px 30px 50px;
+            font-style: italic;
+            position: relative;
+            background-color: var(--color-quote-bg);
+            border-left: 6px solid var(--color-quote);
+            @include animation(entrance--float-left 1s ease 1s);
+            &:nth-child(2) {
+                @include animation(entrance--float-left 1s ease 1.2s);
+            }
+            &:before {
+                content: "\201C";
+                font-family: Arial;
+                font-size: 60px;
+                position: absolute;
+                left: 10px;
+                color: var(--color-quote);
+            }
+            @include tablet {
+                width: 70%;
+                margin-left: auto;
+            }
+            @include desktop {
+                width: 70%;
+                margin-left: auto;
+            }
+            @include lg-desktop {
+                width: unset;
+                margin-left: auto;
+            }
+        }
+    }
+}

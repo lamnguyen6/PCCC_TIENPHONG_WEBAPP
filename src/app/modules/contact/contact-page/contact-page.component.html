@@ -1,0 +1,91 @@
+<div class="contact-page">
+    <app-header></app-header>
+    <div class="container">
+        <div class="contact-wrap">
+            <div class="contact-info contact-info-1">
+                <h3><span>PCCC TIÊN PHONG</span><span>Giải Pháp An Toàn Chuyên Nghiệp</span></h3>
+            </div>
+            <div class="contact-info contact-info-2">
+                <ul>
+                    <li>
+                        <span><mat-icon aria-hidden="false" fontIcon="location_on"></mat-icon></span>
+                        <span>Xóm 9 xã Tràng Đà, TP. Tuyên Quang, Tỉnh Tuyên Quang</span>
+                    </li>
+                    <li><h3>Bộ phận kinh doanh</h3></li>
+                    <li>
+                        <span><mat-icon aria-hidden="false" fontIcon="stay_current_portrait"></mat-icon></span>
+                        <a href="tel:0976839054">(+84) 97 683 9054</a>
+                    </li>
+                    <li>
+                        <span><mat-icon aria-hidden="false" fontIcon="email"></mat-icon></span>
+                        <a href="javascript:void(0)">ctytienphongtq@gmail.com</a>
+                    </li>
+                    <li><h3>Hỗ trợ kỹ thuật</h3></li>
+                    <li>
+                        <span><mat-icon aria-hidden="false" fontIcon="stay_current_portrait"></mat-icon></span>
+                        <a href="tel:0976839054">(+84) 97 683 9054</a>
+                    </li>
+                    <li>
+                        <span><mat-icon aria-hidden="false" fontIcon="email"></mat-icon></span>
+                        <a href="javascript:void(0)">ctytienphongtq@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" [formGroup]="form" #myForm="ngForm" class="form">
+                    <div class="form__control">
+                        <div class="form__control__content">
+                            <div class="form__control__title">Tên của bạn</div>
+                            <input type="text" autocomplete="off" formControlName="name">
+                            <ng-container *ngIf="myForm.submitted && f['name']['errors']">
+                                <div class="form__control__error">
+                                    <p *ngIf="f['name']['errors']['required']">Vui lòng không để trống</p>
+                                    <p *ngIf="f['name']['errors']['maxlength']">Vui lòng nhập tên của bạn không quá 30 ký tự</p>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="form__control">
+                        <div class="form__control__content">
+                            <div class="form__control__title">Số điện thoại</div>
+                            <input type="text" autocomplete="off" formControlName="phone">
+                            <ng-container *ngIf="myForm.submitted && f['phone']['errors']">
+                                <div class="form__control__error">
+                                    <p *ngIf="f['phone']['errors']['required']">Vui lòng không để trống</p>
+                                    <p *ngIf="f['phone']['errors']['minlength'] 
+                                                || f['phone']['errors']['maxlength']
+                                                || f['phone']['errors']['pattern']
+                                    ">Số điện thoại không hợp lệ</p>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="form__control">
+                        <div class="form__control__content">
+                            <div class="form__control__title">Địa chỉ e-mail</div>
+                            <input type="text" autocomplete="off" formControlName="email">
+                            <ng-container *ngIf="myForm.submitted && f['email']['errors']">
+                                <div class="form__control__error">
+                                    <p *ngIf="f['email']['errors']['required']">Vui lòng không để trống</p>
+                                    <p *ngIf="f['email']['errors']['email']">Email không hợp lệ</p>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="form__control">
+                        <div class="form__control__content">
+                            <div class="form__control__title">Để lại tin nhắn của bạn</div>
+                            <textarea type="text" autocomplete="off" formControlName="note"></textarea>
+                        </div>
+                    </div>
+                    <div class="form__actions">
+                        <button class="form__submit" type="submit">Gửi thông tin</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-contact-map></app-contact-map>
+    <app-footer></app-footer>
+</div>
+

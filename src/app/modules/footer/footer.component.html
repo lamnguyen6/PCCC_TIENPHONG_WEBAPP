@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="footer-wrap">
         <div class="company-intro">
-            <a class="logo-mini" href="#">
+            <a class="logo-mini" [routerLink]="['']">
                 <img src="/assets/images/logo/logo.png" alt="">
             </a>
             <p><b>CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</b> - <i color="secondary">Giải Pháp An Toàn Chuyên Nghiệp</i></p>
@@ -9,17 +9,17 @@
         </div>
         <div class="page-routes">
             <ul>
-                <li><a href="#">trang chủ</a></li>
-                <li><a href="#">giới thiệu</a></li>
-                <li><a href="#">sản phẩm</a></li>
-                <li><a href="#">dịch vụ</a></li>
-                <li><a href="#">liên hệ</a></li>
-                <li><a href="#">cẩm nang pccc</a></li>
+                <li><a [routerLink]="['']">trang chủ</a></li>
+                <li><a [routerLink]="['/gioi-thieu']">giới thiệu</a></li>
+                <li><a [routerLink]="['']">sản phẩm</a></li>
+                <li><a [routerLink]="['']">dịch vụ</a></li>
+                <li><a [routerLink]="['/lien-he']">liên hệ</a></li>
+                <li><a [routerLink]="['']">cẩm nang pccc</a></li>
             </ul>
         </div>
         <div class="company-info">
             <ul>
-                <li><span>Đại diện</span><span>Ông Phạm Xuân Văn</span></li>
+                <li><span>Đại diện</span><span>(Ông) Phạm Xuân Văn</span></li>
                 <li><span>Chức vụ</span><span>Giám đốc</span></li>
                 <li>
                     <span><mat-icon aria-hidden="false" fontIcon="stay_current_portrait"></mat-icon></span>

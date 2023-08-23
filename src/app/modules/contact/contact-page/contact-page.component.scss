@@ -1,0 +1,126 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    .contact {
+        &-page {}
+        &-wrap {
+            display: grid;
+            grid-row-gap: 10px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+            "title"
+            "form"
+            "info";
+
+            @media only screen and (min-width: 650px) {
+                padding: 30px 0;
+                grid-column-gap: 30px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto 1fr;
+                grid-template-areas:
+                "title form"
+                "info form";
+            }
+        }
+        &-info {
+            &-1 {
+                grid-area: title;
+                h3 {
+                    color: var(--color-black-light);
+                    @include flexAJ();
+                    @include --flexWrap();
+                    @include --flexDir(column);
+                    font-weight: 700;
+                    font-size: 20px;
+                    margin: 0;
+                    letter-spacing: 1px;
+                    @include desktop {
+                        margin-bottom: 20px;
+                        @include --flexDir(row);
+                        font-size: 25px;
+                        font-weight: 900;
+                    }
+                    span {
+                        &:nth-child(2) {
+                            font-size: 16px;
+                            @include desktop {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-2 {
+                grid-area: info;
+                li {
+                    margin-bottom: 8px;
+                    &:not(&:first-child) {
+                        margin-top: 8px;
+                    }
+                    @include flexAJ();
+                    > * {
+                        &:first-child {
+                            font-weight: 400;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                li, span, a, p {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                h3 {
+                    font-size: 14px;
+                    font-weight: 600 !important;
+                    margin: 5px 0;
+                    font: unset;
+                }
+                ::ng-deep mat-icon {
+                    text-align: right;
+                }
+                @include desktop {
+                    li, span, a, p, h3 {
+                        font-size: 16px;
+                    }
+                    h3 {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+        &-form {
+            grid-area: form;
+            .form {
+                width: 80%;
+                max-width: 500px;
+                @include flexAJ();
+                @include --flexWrap(wrap);
+                gap: 10px;
+                &__control {
+                    margin: 0;
+                    width: 100%;
+                    @include desktop {
+                        &:nth-child(2), &:nth-child(3) {
+                            width: calc(50% - 5px);
+                        }
+                    }
+                }
+                &__actions {
+                    margin: 0;
+                    button {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .footer {
+            &-wrap {
+                border: none !important;
+            }
+        }
+    }
+}

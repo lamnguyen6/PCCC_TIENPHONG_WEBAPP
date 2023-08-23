@@ -20,15 +20,19 @@ export class HomePageComponent implements OnInit {
 
   mainBanners: Array<SwiperItem> = [
     {
-      src: '/assets/images/banner/home-banner1.png',
+      src: '/assets/images/banner/banner1.png',
       link: '#'
     },
     {
-      src: '/assets/images/banner/home-banner2.png',
+      src: '/assets/images/banner/banner2.png',
       link: '#'
     },
     {
-      src: '/assets/images/banner/home-banner3.png',
+      src: '/assets/images/banner/banner3.png',
+      link: '#'
+    },
+    {
+      src: '/assets/images/banner/banner4.png',
       link: '#'
     },
   ];
@@ -46,7 +50,7 @@ export class HomePageComponent implements OnInit {
       badges: []
     },
     {
-      title: 'Camera chống trộm - Foscam-FI9804W',
+      title: 'Camera chống trộm Foscam',
       price: 'Liên hệ',
       img: '/assets/images/products/camera-chong-trom-ngoai-troi-IP-Foscam-FI9804W.png',
       badges: []

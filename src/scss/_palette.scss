@@ -1,6 +1,7 @@
 $palettes: (
     primary: (
-        A: #d31336,
+        // A: #d31336,
+        A: #B51500,
         A1: #ce314e,
 		A2: #7c0b20,
 		A3: #851616,
@@ -10,17 +11,23 @@ $palettes: (
         A1: #fc876d,
 		A2: #8d311c,
 	),
+	highlight: (
+		A: #fffa33,
+	),
 	base: (
 		A: #f4f6eb
 	),
     black: (
         A: #000,
         A1: #252131,
+		A2: #6B6B6B,
 	),
 	green: (
 		A: #65BC52,
 		A1: #8ec283,
-		A2: #407434
+		A2: #407434,
+		A3: #78C0A8,
+		A4: #EDEDED,
 	)
 );
 

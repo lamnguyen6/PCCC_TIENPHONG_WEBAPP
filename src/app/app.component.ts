@@ -16,7 +16,7 @@ export const appear = trigger('routeAnimations', [
 		], { optional: true }),
 		group([
 			query(':enter', [
-				animate('0.5s 1.2s ease', keyframes([
+				animate('0.5s 0.6s ease', keyframes([
 					style({ opacity: 0, zIndex: -4 }),
 					style({ opacity: 1, zIndex: 1 }),
 				]))

@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InitModule } from './modules/init/init.module';
+import { FloatingContentModule } from './modules/floating-content/floating-content.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { InitModule } from './modules/init/init.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     InitModule,
+    FloatingContentModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
