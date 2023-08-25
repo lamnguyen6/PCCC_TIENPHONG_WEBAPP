@@ -118,7 +118,7 @@
     background: $white;
     cursor: pointer;
     input {
-        @include flex(1);
+        @include --flex(1);
         padding: 0 16px;
         border: none;
         outline: none;
@@ -135,7 +135,7 @@
         line-height: $h;
     }
     mat-icon {
-        @include flex(0, 0, auto);
+        @include --flex(0, 0, auto);
         width: $h;
         height: $h;
         line-height: $h;

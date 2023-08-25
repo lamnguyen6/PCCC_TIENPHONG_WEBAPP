@@ -36,7 +36,7 @@
     .logo {
         padding-right: 30px;
         padding-top: 5px;
-        @include flex(0, 0, auto);
+        @include --flex(0, 0, auto);
         a {
             img {
                 width: 100px;
@@ -44,7 +44,7 @@
         }
     }
     .nav {
-        @include flex(1);
+        @include --flex(1);
         @include flexAJ(center, center);
     }
     .menu-mobile-btn {

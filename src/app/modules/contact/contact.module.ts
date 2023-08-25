@@ -7,6 +7,7 @@ import { HeaderModule } from '../header/header.module';
 import { FooterModule } from '../footer/footer.module';
 import { FormModule } from '../form/form.module';
 import { MatIconModule } from '@angular/material/icon';
+import { LayoutPageModule } from '../layout-page/layout-page.module';
 
 const routes: Routes = [
   {
@@ -26,8 +27,7 @@ const routes: Routes = [
     CommonModule,
     FormModule,
     MatIconModule,
-    HeaderModule,
-    FooterModule,
+    LayoutPageModule,
   ],
 })
 export class ContactModule { }

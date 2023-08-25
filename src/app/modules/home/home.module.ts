@@ -7,6 +7,7 @@ import { BevSwiperModule } from '../bev-swiper/bev-swiper.module';
 import { FooterModule } from '../footer/footer.module';
 import { FloatingContentModule } from '../floating-content/floating-content.module';
 import { DirectivesModule } from '../directives/directives.module';
+import { LayoutPageModule } from '../layout-page/layout-page.module';
 
 const routes: Routes = [
 	{
@@ -23,10 +24,9 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
-    HeaderModule,
     BevSwiperModule,
-    FooterModule,
     DirectivesModule,
+    LayoutPageModule,
   ],
 })
 export class HomeModule { }

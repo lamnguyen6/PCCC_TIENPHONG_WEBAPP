@@ -19,11 +19,11 @@
                 @include flexAJ();
                 .left-section {
                     width: 300px;
-                    @include flex(0, 0, auto);
+                    @include --flex(0, 0, auto);
                     padding: 0 10px;
                 }
                 .right-section {
-                    @include flex(1, 1, 1);
+                    @include --flex(1, 1, 1);
                     padding: 0 10px;
                 }
             }

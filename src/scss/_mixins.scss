@@ -5,7 +5,7 @@
     display: flex;
 }
 
-@mixin flex($fg: 1, $fs: 0, $fb: auto) {
+@mixin --flex($fg: 1, $fs: 0, $fb: auto) {
     // Set a variable to be used by box-flex properties
     $fg-boxflex: $fg;
   
@@ -59,6 +59,13 @@
     -webkit-order: $int;
     -ms-flex-order: $int;
     order: $int;
+}
+
+@mixin --flexShrink($int: 0) {
+    -webkit-flex-shrink: $int;
+    -moz-flex-shrink: $int;
+    -ms-flex: $int;
+    flex-shrink: $int;
 }
 
 @mixin flexAJ($al: flex-start, $jus: flex-start) {

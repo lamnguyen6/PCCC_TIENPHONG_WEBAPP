@@ -1,0 +1,37 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    @keyframes sticky__header {
+        from {
+            @include transform(translateY(-100%));
+        }
+    }
+    .layout {
+        width: 100%;
+        min-height: 100vh;
+        @include flexAJ();
+        @include --flexDir(column);
+        &-content {
+            width: 100%;
+            @include --flex(1, 0, auto);
+        }
+        &-header {
+            background-color: var(--color-white);
+            width: 100%;
+            position: static;
+            @include transition(all 0.6s ease-out);
+            top: -50px;
+            &.sticky-header {
+                z-index: 101;
+                position: fixed;
+                top: 0;
+                left: 0;
+                @include animation(sticky__header 1s both);
+            }
+        }
+        &-footer {
+            @include --flexShrink(0);
+        }
+    }
+}
