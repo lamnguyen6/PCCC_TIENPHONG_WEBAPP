@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-layout-full-page',
@@ -8,11 +8,17 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class FullPageComponent implements OnInit {
   stickyHeader: boolean = false;
   @HostListener('window:scroll', ['$event']) onscroll() {
-    this.stickyHeader = window.scrollY > 120;
+    const viewH = Number(window.innerHeight);
+    const margin = 600;
+    let pageH = Number(this.el.nativeElement.querySelector('.layout')) || viewH;
+    this.stickyHeader = pageH > viewH + margin && window.scrollY > 200;
   }
-  constructor() { }
+  constructor(
+    private el: ElementRef,
+  ) { }
 
   ngOnInit(): void {
+    console.log(`window`, window.innerHeight);
   }
 
 }
