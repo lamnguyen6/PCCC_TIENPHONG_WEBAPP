@@ -16,7 +16,6 @@ import { FloatingContentModule } from './modules/floating-content/floating-conte
     BrowserAnimationsModule,
     AppRoutingModule,
     InitModule,
-    FloatingContentModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

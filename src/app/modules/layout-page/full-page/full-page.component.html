@@ -9,3 +9,32 @@
         <app-footer></app-footer>
     </div>
 </div>
+<div class="access-btn">
+    <div class="access-btn-zalo">
+        <app-access-button [tooltip]="{ content: 'Kết nối qua Zalo', pos: 'right' }">
+            <ng-container content>
+                <a class="access-zalo" href="tel:+84976839054">
+                    <img src="/assets/images/contact/zalo.png" alt="0976839054">
+                </a>
+            </ng-container>
+        </app-access-button>
+    </div>
+    <div class="access-btn-fb">
+        <app-access-button [tooltip]="{ content: 'Facebook', pos: 'right' }">
+            <ng-container content>
+                <a class="access-fb" href="tel:+84976839054">
+                    f
+                </a>
+            </ng-container>
+        </app-access-button>
+    </div>
+    <div class="access-btn-call">
+        <app-access-button [tooltip]="{ content: 'Liên hệ trực tiếp', pos: 'right' }">
+            <ng-container content>
+                <a class="access-call" href="tel:+84976839054">
+                    <img src="/assets/images/contact/call.png" alt="0976839054">
+                </a>
+            </ng-container>
+        </app-access-button>
+    </div>
+</div>

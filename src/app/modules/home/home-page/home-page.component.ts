@@ -41,7 +41,7 @@ export class HomePageComponent implements OnInit {
     this.productList = this.productService.searchProduct('').map(item => this.productService._productcard(item));
   }
   ngAfterViewInit() {
-    this.mainBannerCmp!.toggleComponentActive();
+    // this.mainBannerCmp!.toggleComponentActive();
   }
 
   animateIdleWithSpeed(element: HTMLElement, speed: number) {
