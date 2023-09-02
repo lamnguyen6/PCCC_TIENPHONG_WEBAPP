@@ -1,0 +1,86 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    .product {
+        &-intro {
+            @media only screen and (min-width: 768px) {
+                @include flexAJ(stretch, flex-start);
+                gap: 20px;
+                @include --flexWrap(nowrap);
+            }
+        }
+        &-images {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            @media only screen and (min-width: 768px) {
+                @include --flex(0,0,auto);
+                width: 50%;
+            }
+        }
+        &-info {
+            flex: 1;
+            padding: 20px 30px;
+        }
+        &-info, &-description, &-specifications {
+            h3 {
+                font-size: 25px;
+                font-weight: 400;
+            }
+            ::ng-deep p {
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                line-height: 18px;
+                text-align: justify;
+                color: var(--color-black-light);
+                @include desktop {
+                    font-size: 16px;
+                }
+            }
+            &:not(&-info) {
+                margin: 30px 0;
+                @include desktop {
+                    margin: 60px 0;
+                }
+            }
+        }
+        &-specifications {
+            ::ng-deep {
+                ul {
+                    border-width: 1px 0 0 1px;
+                    border-color: var(--color-black-light);
+                    border-style: solid;
+                    li {
+                        span {
+                            display: block;
+                            width: 100%;
+                            padding: 10px 20px;
+                            color: var(--color-black-light);
+                            border-color: var(--color-black-light);
+                            border-style: solid;
+                            border-width: 0 1px 1px 0;
+                            &:first-child {
+                                font-weight: bold;
+                            }
+                        }
+                        @media only screen and (min-width: 768px) {
+                            @include flexAJ(stretch, flex-start);
+                            span {
+                                &:first-child {
+                                    max-width: 300px;
+                                    @include --flex(0,0,auto);
+                                }
+                                &:last-child {
+                                    flex: 1;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

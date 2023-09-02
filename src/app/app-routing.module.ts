@@ -7,6 +7,10 @@ const routes: Routes = [
 		loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
 	},
 	{
+		path: 'thiet-bi-pccc',
+		loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule),
+	},
+	{
 		path: 'gioi-thieu',
 		loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule),
 	},

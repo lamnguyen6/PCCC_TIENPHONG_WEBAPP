@@ -1,13 +1,8 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { SwiperItem } from '../../bev-swiper/bev-swiper.interface';
 import { BevSwiperComponent } from '../../bev-swiper/bev-swiper.component';
-
-export interface ProductCard {
-  title: string;
-  price: string;
-  img: string;
-  badges: Array<string>;
-}
+import { ProductCard } from '../../product/product';
+import { ProductService } from '../../product/product.service';
 
 @Component({
   selector: 'app-home-page',
@@ -36,43 +31,14 @@ export class HomePageComponent implements OnInit {
       link: '#'
     },
   ];
-  productList: Array<ProductCard> = [
-    {
-      title: 'Bình Chữa Cháy CO2 - MT3',
-      price: 'Liên hệ',
-      img: '/assets/images/products/binhcuuhoaCO2-MT3.png',
-      badges: []
-    },
-    {
-      title: 'Bộ tiêu lệnh chữa cháy',
-      price: 'Liên hệ',
-      img: '/assets/images/products/bo-tieu-lenh-chua-chay.png',
-      badges: []
-    },
-    {
-      title: 'Camera chống trộm Foscam',
-      price: 'Liên hệ',
-      img: '/assets/images/products/camera-chong-trom-ngoai-troi-IP-Foscam-FI9804W.png',
-      badges: []
-    },
-    {
-      title: 'Máy Bơm Tohatsu-V20DS',
-      price: 'Liên hệ',
-      img: '/assets/images/products/may-bom-pccc-tohatsu-V20DS.png',
-      badges: []
-    },
-    {
-      title: 'Thiết bị cứu hỏa Woosung',
-      price: 'Liên hệ',
-      img: '/assets/images/products/thiet-bi-cuu-hoa-woosung.png',
-      badges: []
-    },
-  ];
+  productList: Array<ProductCard> = [];
 
   constructor(
+    private productService: ProductService,
   ) { }
 
   ngOnInit(): void {
+    this.productList = this.productService.searchProduct('').map(item => this.productService._productcard(item));
   }
   ngAfterViewInit() {
     this.mainBannerCmp!.toggleComponentActive();

@@ -1,0 +1,99 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    %active-paging-btn {
+        $borderW: 2px;
+        $borderClr: var(--color-primary);
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background:
+            linear-gradient(to right, $borderClr $borderW, transparent $borderW) 0 0,
+            linear-gradient(to right, $borderClr $borderW, transparent $borderW) 0 100%,
+            linear-gradient(to left, $borderClr $borderW, transparent $borderW) 100% 0,
+            linear-gradient(to left, $borderClr $borderW, transparent $borderW) 100% 100%,
+            linear-gradient(to bottom, $borderClr $borderW, transparent $borderW) 0 0,
+            linear-gradient(to bottom, $borderClr $borderW, transparent $borderW) 100% 0,
+            linear-gradient(to top, $borderClr $borderW, transparent $borderW) 0 100%,
+            linear-gradient(to top, $borderClr $borderW, transparent $borderW) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            opacity: 1;
+        }
+    }
+    .product-details-slider {
+        img {
+            width: 100%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .main {
+            margin-bottom: 20px;
+        }
+        .pagination {
+            background-color: var(--color-white);
+            position: relative;
+            padding: 0 40px;
+            &-btn {
+                width: 90%;
+                padding: 10px 10px;
+                @include flexAJ(center, center);
+            }
+            img {
+                width: 100%;
+                max-height: 95px;
+                display: block;
+            }
+            > button {
+                $size: 25px;
+                border: none;
+                background: none;
+                outline: none;
+                width: $size;
+                height: $size;
+                top: 60%;
+                color: var(--color-primary);
+
+                &:after {
+                    font-size: $size;
+                }
+                &.swiper-button-prev {}
+                &.swiper-button-next {}
+            }
+        }
+        ::ng-deep {
+            .paging-btn-active {
+                .pagination-btn {
+                    @extend %active-paging-btn;
+                }
+            }
+            .main {
+                swiper-container {
+                    margin: 0 auto;
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            .pagination {
+                swiper-slide {
+                    width: calc((100% - 60px) / 3);
+                    @include flexAJ(center, center);
+                    .pagination-btn {
+                        &:hover {
+                            cursor: pointer;
+                                @extend %active-paging-btn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

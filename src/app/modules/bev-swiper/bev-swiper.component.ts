@@ -10,7 +10,7 @@ export class BevSwiperComponent implements OnInit {
   @Input('src') datasrc: Array<SwiperItem> = [];
   @Input('config') config: any;
 
-  componentActive: boolean = false;
+  componentActive: boolean;
 
   constructor() { }
 

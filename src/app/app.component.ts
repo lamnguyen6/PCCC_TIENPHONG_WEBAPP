@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { animate, group, keyframes, query, style, transition, trigger } from "@angular/animations";
+import {register} from 'swiper/element/bundle';
 
 export const appear = trigger('routeAnimations', [
 	transition('* <=> *', [
@@ -38,7 +39,10 @@ export const appear = trigger('routeAnimations', [
   animations: [appear]
 })
 export class AppComponent {
-  constructor() { }
+  constructor() {
+	// swiper 9 register
+	register();
+  }
 
   ngOnInit(): void { }
 

@@ -1,0 +1,19 @@
+<app-layout-full-page>
+    <div class="product-page">
+        <div class="container">
+            <div class="product-list">
+                <ng-container *ngFor="let item of productList">
+                    <div class="card" [routerLink]="['/thiet-bi-pccc', item['id']]">
+                        <div class="card-img">
+                            <img [src]="item['img']" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h2 class="card-title">{{ item['name'] }}</h2>
+                            <a class="card-submit">Xem thêm</a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</app-layout-full-page>

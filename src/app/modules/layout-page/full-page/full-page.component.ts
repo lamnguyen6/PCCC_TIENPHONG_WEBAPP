@@ -18,7 +18,6 @@ export class FullPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(`window`, window.innerHeight);
   }
 
 }

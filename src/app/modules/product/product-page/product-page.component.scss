@@ -1,0 +1,126 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    .product {
+        &-filter {
+        }
+        &-list {
+            margin: 30px 0;
+            $gap: 10px;
+            @include flexAJ();
+            @include --flexWrap();
+            gap: $gap;
+            .card {
+                width: calc((100% - $gap) / 2);
+                @include desktop {
+                    width: calc((100% - ($gap * 2)) / 3);
+                }
+                @include lg-desktop {
+                    width: calc((100% - ($gap * 3)) / 4);
+                }
+            }
+        }
+    }
+    .search-box {
+        max-width: 500px;
+        margin-left: auto;
+    }
+    // ======= CARD ====== //
+    .card {
+        $card: '.card';
+        $transition-time: .4s;
+        $bg: var(--color-white);
+        $text: var(--color-black-light);
+        $hltext: var(--color-primary);
+
+        position: relative;
+        height: 220px;
+        border-radius: 20px;
+        overflow: hidden;
+        &-img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            transition: $transition-time;
+            img {
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(20deg);
+                width: 110px;
+            }
+        }
+        &-content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            transition: #{ $transition-time * 2 };
+            z-index: 90;
+        }
+        &-title {
+            position: relative;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: $text;
+            padding: 0 16px;
+            font: unset;
+            margin: 0;
+        }
+        &-price {
+            @include flexAJ(center, center);
+            padding: 8px 20px;
+            transition: $transition-time;
+            opacity: 0;
+            visibility: hidden;
+
+            color: $text;
+            font-weight: 300;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-right: 10px;
+        }
+        &-submit {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--color-primary);
+            border-radius: 4px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: 400;
+            color: var(--color-white);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: calc(#{ $transition-time } / 2);
+        }
+        &:hover {
+            cursor: pointer;
+            @include box-shadow(0 0 5px 0 var(--color-primary-dark));
+            #{ $card }-img {
+                top: 0%;
+                transform: translateY(-8%) scale(.8);
+            }
+            #{ $card }-content {
+                height: 100px;
+            }
+            #{ $card }-price {
+                opacity: 1;
+                visibility: visible;
+                transition-delay: .3s;
+            }
+            #{ $card }-submit {
+                opacity: 1;
+                transform: translateY(0px);
+                transition-delay: .4s;
+            }
+        }
+    }
+    // ======= CARD ====== //
+}

@@ -8,6 +8,9 @@
 [color|="secondary"] {
     color: var(--color-secondary);
 }
+[color|="positive"] {
+    color: var(--color-positive);
+}
 
 .backdrop {
     position: fixed;
@@ -47,12 +50,25 @@
 }
 
 .pane {
-    &-light {
-        background-color: var(--color-base);
-        // background-color: var(--color-white-light);
-    }
-    &-dark {
-        background-color: var(--color-black-light);
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--color-quote-bg);
+    box-shadow: 0 0 15px 0px #0000004a;
+    &-quote {
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        padding:1em;
+        background:hsla(67, 95%, 95%, 1);
+        border-width: 5px;
+        border-color: var(--color-primary);
+        &-solid {
+            border-style: solid;
+        }
+        &-dotted {
+            border-style: dotted;
+        }
+        &-dashed {
+            border-style: dashed;
+        }
     }
 }
 
@@ -173,3 +189,31 @@
     }
 }
 // =======DECOR PAGES======= //
+
+// =======animation classes======= //
+.fadeInLeft {
+    @include animation(entrance--float-left 1s);
+}
+.fadeInRight {
+    @include animation(entrance--float-right 1s);
+}
+.fadeInTop {
+    @include animation(entrance--float-up 1s);
+}
+.fadeInBottom {
+    @include animation(entrance--float-down 1s);
+}
+.fadeIn {
+    @include animation(entrance--fadeIn 1s);
+}
+// =======animation classes======= //
+
+.not-found {
+    margin: 10px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    @include desktop {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,34 @@
+<app-layout-full-page>
+    <div class="product-details-page">
+        <div class="container">
+            <ng-container *ngIf="product; else notFound">
+                <div class="product-intro">
+                    <div class="product-images">
+                        <app-product-details-slider [datasrc]="sliderDatasrc"></app-product-details-slider>
+                    </div>
+                    <div class="product-info pane-quote pane-quote-dashed">
+                        <h3>{{ product['name'] }}</h3>
+                        <ng-container *ngIf="product['info']">
+                            <div [innerHTML]="product['info']"></div>
+                        </ng-container>
+                    </div>
+                </div>
+                <ng-container *ngIf="product['description']">
+                    <div class="product-description pane">
+                        <h3>Thông tin sản phẩm</h3>
+                        <div [innerHTML]="product['description']"></div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="product['specifications']">
+                    <div class="product-specifications pane">
+                        <h3>Thông số kỹ thuật cơ bản</h3>
+                        <div [innerHTML]="product['specifications']"></div>
+                    </div>
+                </ng-container>
+            </ng-container>
+            <ng-template #notFound>
+                <p class="not-found">Sản phẩm quý khác tìm kiếm không có kết quả. <a [routerLink]="['/thiet-bi-pccc']">Quay lại trang sản phẩm</a></p>
+            </ng-template>
+        </div>
+    </div>
+</app-layout-full-page>

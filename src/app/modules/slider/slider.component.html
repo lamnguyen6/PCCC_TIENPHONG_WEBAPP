@@ -1,0 +1,10 @@
+<div class="slider">
+    <div class="slider-place-holder"></div>
+    <div class="slider-content">
+        <swiper-container #swiperRef init="false">
+            <swiper-slide *ngFor="let item of datasrc">
+                <ng-content select="[slideItem]"></ng-content>
+            </swiper-slide>
+        </swiper-container>
+    </div>
+</div>
