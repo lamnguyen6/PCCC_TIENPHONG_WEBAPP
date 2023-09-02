@@ -10,8 +10,8 @@ export class FullPageComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) onscroll() {
     const viewH = Number(window.innerHeight);
     const margin = 600;
-    let pageH = Number(this.el.nativeElement.querySelector('.layout')) || viewH;
-    this.stickyHeader = pageH > viewH + margin && window.scrollY > 200;
+    let pageH = Number(this.el.nativeElement.querySelector('.layout').offsetHeight) || viewH;
+    this.stickyHeader = pageH >= viewH + margin && window.scrollY > 200;
   }
   constructor(
     private el: ElementRef,
