@@ -9,19 +9,17 @@
                 <div class="section-wrap">
                     <div class="left-section d-desktop">
                         <ul class="list-of-services">
-                            <li class="category"><a href="#">Sản phẩm</a></li>
-                            <li><a href="#">Đăng ký lắp đặt PCCC</a></li>
-                            <li><a href="#">Vật tư cứu hỏa</a></li>
-                            <li><a href="#">Camera chống trộm</a></li>
-                            <li><a href="#">Thiết bị báo trộm</a></li>
-                            <li><a href="#">Thiết bị báo cháy</a></li>
-                            <li><a href="#">Thiết bị cứu hỏa Woosung</a></li>
-                            <li><a href="#">Bình PCCC</a></li>
-                            <li><a href="#">Bình bột PCCC</a></li>
-                            <li class="category"><a href="#">Dịch vụ</a></li>
-                            <li><a>Lắp đặt hệ thống PCCC tại nhà</a></li>
-                            <li><a>Nạp bình cứu hỏa</a></li>
-                            <li><a>Bảo trì hệ thống PCCC</a></li>
+                            <ng-container *ngFor="let group of sideMenu | groupBy: 'group'; let i = index">
+                                <li class="category"><a href="#">{{ group.key }}</a></li>
+                                <ng-container *ngFor="let item of group.value">
+                                    <ng-container *ngIf="i == 0">
+                                        <li><a [routerLink]="['/thiet-bi-pccc', item.id]">{{ item.name }}</a></li>
+                                    </ng-container>
+                                    <ng-container *ngIf="i == 1">
+                                        <li><a [routerLink]="['/dich-vu', item.id]">{{ item.name }}</a></li>
+                                    </ng-container>
+                                </ng-container>
+                            </ng-container>
                         </ul>
                     </div>
                     <div class="right-section fadeInLeft">
@@ -39,9 +37,9 @@
                                 cháy cho toàn bộ khu vực Tây Bắc, Việt Nam.</span>
                             </p>
                             <p class="d-desktop">Tầm nhìn của <a color="primary" href="#">PCCC Tiên Phong</a> 
-                                là trở thành <span color="positive">một đơn vị hàng đầu trong lĩnh vực 
+                                là trở thành <span><b>một đơn vị hàng đầu trong lĩnh vực 
                                     phòng cháy chữa cháy, mang đến những giải pháp an toàn chuyên nghiệp, 
-                                    hiệu quả và đáng tin cậy cho các khách hàng và đối tác</span>. 
+                                    hiệu quả và đáng tin cậy cho các khách hàng và đối tác</b></span>. 
                                     Chúng tôi cam kết cung cấp sản phẩm và dịch vụ chất lượng cao, 
                                     đồng thời đảm bảo giá cả hợp lý và dịch vụ hậu mãi tận tâm.
                             </p>
@@ -50,13 +48,13 @@
                             <h3>Sản Phẩm Nổi Bật</h3>
                             <div class="product-list">
                                 <ng-container *ngFor="let item of productList">
-                                    <div class="card">
+                                    <div class="card" [routerLink]="['/thiet-bi-pccc', item['id']]">
                                         <div class="card-img">
                                             <img [src]="item['img']" alt="">
                                         </div>
                                         <div class="card-content">
                                             <h2 class="card-title">{{ item['name'] }}</h2>
-                                            <a class="card-submit" href="#">Xem thêm</a>
+                                            <a class="card-submit">Xem thêm</a>
                                         </div>
                                     </div>
                                 </ng-container>
@@ -67,11 +65,5 @@
             </div>
         </div>
         <!-- end of dashboard -->
-    
-        <!-- news -->
-        <div id="news" class="section-news">
-            <h1 class="section-title">Cẩm nang PCCC / Tin tức</h1>
-        </div>
-        <!-- end of news -->
     </div>
 </app-layout-full-page>

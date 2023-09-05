@@ -1,0 +1,28 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+:host {
+    .cs {
+        $gap: 20px;
+        &-page {
+        }
+        &-list {
+            margin: 30px 0;
+            @include flexAJ();
+            @include --flexWrap();
+            gap: $gap;
+        }
+        &-item {
+            width: calc((100% - $gap) / 2);
+            @include desktop {
+                width: calc((100% - ($gap * 2)) / 3);
+            }
+            @include lg-desktop {
+                width: calc((100% - ($gap * 3)) / 4);
+            }
+            &:hover {
+                @include transform(scale(1.01));
+            }
+        }
+    }
+}

@@ -52,8 +52,11 @@
 .pane {
     padding: 30px;
     border-radius: 8px;
-    background-color: var(--color-quote-bg);
-    box-shadow: 0 0 15px 0px #0000004a;
+    background: var(--color-white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    &.dark {
+        background: var(--color-black-light);
+    }
     &-quote {
         border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
         padding:1em;
@@ -104,6 +107,24 @@
                 mask-size: contain;
                 mask-position: center;
             }
+        }
+        &-design {
+            mask: url("/assets/images/svg/design.svg");
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+        &-monitor {
+            mask: url("/assets/images/svg/monitor.svg");
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+        &-contest {
+            mask: url("/assets/images/svg/contest.svg");
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
         }
     }
     &-bg {
@@ -215,5 +236,43 @@
     text-align: center;
     @include desktop {
         font-size: 16px;
+    }
+}
+
+button {
+    font-size: 14px;
+    @include desktop {
+        font-size: 16px;
+    }
+    &.submit-btn {
+        background: var(--color-primary);
+        color: var(--color-white);
+        line-height: 38px;
+        padding: 0 20px;
+        @include border-radius(5px);
+    }
+}
+.app-breadcrumb {
+    @include border-radius(8px);
+    @include flexAJ(flex-end, flex-start);
+    padding: 16px;
+    margin: 20px 0;
+    background: var(--color-quote-bg);
+    > * {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: var(--color-black-light);
+        font-size: 16px;
+        line-height: 1;
+    }
+    a {
+        color: var(--color-primary);
+    }
+    p {
+        margin: 0;
+    }
+    span {
+        margin: 0 10px;
+        font-size: 20px;
     }
 }

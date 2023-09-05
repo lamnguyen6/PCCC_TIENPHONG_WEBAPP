@@ -2,6 +2,11 @@
 @import "src/scss/mixins";
 
 :host {
+    @keyframes zoomZoom {
+        from {
+            @include transform(scale(.9));
+        }
+    }
     %active-paging-btn {
         $borderW: 2px;
         $borderClr: var(--color-primary);
@@ -24,7 +29,7 @@
             linear-gradient(to top, $borderClr $borderW, transparent $borderW) 100% 100%;
 
             background-repeat: no-repeat;
-            background-size: 20px 20px;
+            background-size: 15px 15px;
             opacity: 1;
         }
     }
@@ -86,10 +91,15 @@
                 swiper-slide {
                     width: calc((100% - 60px) / 3);
                     @include flexAJ(center, center);
-                    .pagination-btn {
-                        &:hover {
-                            cursor: pointer;
+                    &:not(.paging-btn-active) {
+                        .pagination-btn {
+                            &:hover {
+                                cursor: pointer;
                                 @extend %active-paging-btn;
+                                &:before {
+                                    @include animation(zoomZoom .2s linear);
+                                }
+                            }
                         }
                     }
                 }

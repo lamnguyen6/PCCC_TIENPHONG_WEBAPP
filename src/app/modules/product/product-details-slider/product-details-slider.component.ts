@@ -39,8 +39,6 @@ export class ProductDetailsSliderComponent implements OnInit, AfterViewInit {
   
     swiperEl.initialize();
     
-    console.log(`_mainSwiperRef`, this._mainSwiperRef);
-
     if (this.mainSwiper) this.mainSwiper.currentBreakpoint = false; // Breakpoint fixes
     this.mainSwiper = this._mainSwiperRef!.nativeElement.swiper;
   
@@ -75,7 +73,6 @@ export class ProductDetailsSliderComponent implements OnInit, AfterViewInit {
     this.pagingSwiper!.on('click', swiper => { // Any change subscription you wish
       const activeIndex = swiper.activeIndex;
       const clickedIndex = swiper.clickedIndex;
-      console.log(`clickedIndex`, clickedIndex, activeIndex, swiper);
       // set active slide for paging
       for (let i = 0; i < swiper.slides.length; i++) {
         if (i === clickedIndex) {

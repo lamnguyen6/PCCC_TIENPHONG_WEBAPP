@@ -9,7 +9,7 @@ export class FullPageComponent implements OnInit {
   stickyHeader: boolean = false;
   @HostListener('window:scroll', ['$event']) onscroll() {
     const viewH = Number(window.innerHeight);
-    const margin = 600;
+    const margin = 700;
     let pageH = Number(this.el.nativeElement.querySelector('.layout').offsetHeight) || viewH;
     this.stickyHeader = pageH >= viewH + margin && window.scrollY > 200;
   }

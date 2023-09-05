@@ -1,0 +1,29 @@
+<app-layout-full-page>
+    <div class="cs-page">
+        <div class="container">
+            <div class="app-breadcrumb">
+                <a [routerLink]="['']">Trang chủ</a><span>/</span><p>Dịch vụ PCCC</p> 
+            </div>
+            <div class="cs-list">
+                <ng-container *ngFor="let item of csList">
+                    <a class="cs-item" [routerLink]="['/dich-vu', item.id]">
+                        <app-card [light]="true">
+                            <div class="cs-item-content">
+                                <ng-container *ngIf="item.icons?.length">
+                                    <div class="icons">
+                                        <ng-container *ngFor="let icon of item.icons">
+                                            <span class="icon"><span class="svg-icon svg-icon-{{ icon }}"></span></span>
+                                        </ng-container>
+                                    </div>
+                                </ng-container>
+                                <h3>{{ item.name }}</h3>
+                                <div class="cs-item-desc" [innerHTML]="item.thumbnailContent"></div>
+                                <button class="submit-btn">Xem thêm</button>
+                            </div>
+                        </app-card>
+                    </a>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</app-layout-full-page>

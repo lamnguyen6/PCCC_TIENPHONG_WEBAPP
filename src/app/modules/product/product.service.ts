@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Product, ProductCard } from './product';
-
+interface SideMenuItem {
+    id: any;
+    name: any;
+    group: string;
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -382,8 +386,8 @@ export class ProductService {
     const item = this.PRODUCTS.find(item => item.id === id);
     return id ? item : null;
   }
-  getSideMenuList(): Array<any> {
-    return this.PRODUCTS.map(({ id, name }) => ({ id, name }));
+  getSideMenuList(): Array<SideMenuItem> {
+    return this.PRODUCTS.map(({ id, name }) => ({ id, name, group: 'Sản phẩm' }));
   }
   searchProduct(phrase: string): Array<Product> {
     return this.PRODUCTS.filter(item => {

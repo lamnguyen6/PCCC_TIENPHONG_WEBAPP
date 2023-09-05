@@ -23,12 +23,25 @@
             flex: 1;
             padding: 20px 30px;
         }
+        &-info-wrap {
+            @media only screen and (min-width: 768px) {
+                @include flexAJ();
+                gap: 30px;
+                > div {
+                    width: 50%;
+                }
+            }
+            margin: 30px 0;
+            @include desktop {
+                margin: 60px 0;
+            }
+        }
         &-info, &-description, &-specifications {
             h3 {
                 font-size: 25px;
                 font-weight: 400;
             }
-            ::ng-deep p {
+            ::ng-deep {
                 font-size: 14px;
                 font-weight: 400;
                 letter-spacing: 1px;
@@ -37,12 +50,6 @@
                 color: var(--color-black-light);
                 @include desktop {
                     font-size: 16px;
-                }
-            }
-            &:not(&-info) {
-                margin: 30px 0;
-                @include desktop {
-                    margin: 60px 0;
                 }
             }
         }
@@ -57,19 +64,20 @@
                             display: block;
                             width: 100%;
                             padding: 10px 20px;
-                            color: var(--color-black-light);
                             border-color: var(--color-black-light);
                             border-style: solid;
                             border-width: 0 1px 1px 0;
+                            text-align: left;
                             &:first-child {
                                 font-weight: bold;
                             }
                         }
-                        @media only screen and (min-width: 768px) {
+                        @media only screen and (min-width: 1200px) {
                             @include flexAJ(stretch, flex-start);
                             span {
                                 &:first-child {
-                                    max-width: 300px;
+                                    font-weight: normal;
+                                    max-width: 200px;
                                     @include --flex(0,0,auto);
                                 }
                                 &:last-child {

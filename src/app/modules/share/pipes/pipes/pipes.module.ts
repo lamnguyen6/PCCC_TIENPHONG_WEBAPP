@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from './card/card.component';
+import { GroupByPipe } from 'src/app/pipes/group-by.pipe';
 
 
 
 @NgModule({
   declarations: [
-    CardComponent,
+    GroupByPipe,
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    CardComponent,
+    GroupByPipe,
   ]
 })
-export class ComponentsModule { }
+export class PipesModule { }
