@@ -20,8 +20,8 @@
             @include lg-desktop {
                 width: calc((100% - ($gap * 3)) / 4);
             }
-            &:hover {
-                @include transform(scale(1.01));
+            &-content {
+                z-index: 1;
             }
         }
     }

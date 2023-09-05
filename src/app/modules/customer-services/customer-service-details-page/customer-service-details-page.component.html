@@ -5,7 +5,10 @@
                 <div class="app-breadcrumb">
                     <a [routerLink]="['']">Trang chủ</a><span>/</span><a [routerLink]="['/dich-vu']">Dịch vụ PCCC</a><span>/</span><p>{{ item.name }}</p> 
                 </div>
-                <div [innerHTML]="item.content"></div>
+                <div class="cs-details">
+                    <div [innerHTML]="item.content"></div>
+                    <button [routerLink]="['/lien-he']" class="submit-btn">Liên hệ ngay</button>
+                </div>
             </ng-container>
             <ng-template #notFound>
                 <p class="not-found">Sản phẩm quý khách tìm kiếm không có kết quả. <a [routerLink]="['/dich-vu']">Quay lại trang dịch vụ</a></p>

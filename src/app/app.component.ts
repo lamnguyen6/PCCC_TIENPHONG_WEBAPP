@@ -40,7 +40,7 @@ export const appear = trigger('routeAnimations', [
 })
 export class AppComponent {
   constructor() {
-	// swiper 9 register
+	// swiper element v9 register
 	register();
   }
 

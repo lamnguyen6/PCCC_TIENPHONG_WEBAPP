@@ -1,0 +1,9 @@
+<div class="home-banner">
+    <swiper-container #mainSwiperRef init="false">
+        <ng-container *ngFor="let item of datasrc">
+            <swiper-slide>
+                <img [src]="item['src']" alt="{{ item['name'] }}">
+            </swiper-slide>
+        </ng-container>
+    </swiper-container>
+</div>

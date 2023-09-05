@@ -20,4 +20,17 @@
             font-size: 14px;
         }
     }
+    .cs-details {
+        position: relative;
+        ::ng-deep {
+            h3 {
+                margin: 30px 0;
+            }
+        }
+        .submit-btn {
+            position: absolute;
+            top: -8px;
+            right: 0;
+        }
+    }
 }

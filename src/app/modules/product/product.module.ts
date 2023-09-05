@@ -26,7 +26,6 @@ const routes: Routes = [
     ProductPageComponent,
     ProductCardComponent,
     ProductDetailsPageComponent,
-    // ProductDetailsSliderComponent
   ],
   imports: [
     RouterModule.forChild(routes),
