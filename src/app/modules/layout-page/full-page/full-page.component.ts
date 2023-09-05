@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-layout-full-page',

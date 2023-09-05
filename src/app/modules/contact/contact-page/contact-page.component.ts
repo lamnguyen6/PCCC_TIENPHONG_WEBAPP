@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -12,6 +13,7 @@ export class ContactPageComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private readonly helper: HelperService,
   ) { }
 
   get f() {
@@ -41,4 +43,12 @@ export class ContactPageComponent implements OnInit {
 			note: '',
 		});
 	}
+  resetForm() {
+    this.myForm.resetForm();
+  }
+  onSubmit() {
+    if (this.form.invalid) return;
+    this.helper.snackBar(`Cám ơn quý khách ${ this.f['name'].value } đã gửi thông tin thành công`);
+    this.resetForm();
+  }
 }
