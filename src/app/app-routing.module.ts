@@ -22,6 +22,10 @@ const routes: Routes = [
 		path: 'lien-he',
 		loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule),
 	},
+	{
+		path: 'cam-nang-pccc',
+		loadChildren: () => import('./modules/handbook/handbook.module').then(m => m.HandbookModule),
+	},
 	// {path: '404', component: NotfoundComponent, data: {animation: 'Restrict'}},
 	// {path: '500', component: MaintainedComponent, data: {animation: 'Restrict'}},
 	{path: '', redirectTo: '/trang-chu', pathMatch: 'full'},

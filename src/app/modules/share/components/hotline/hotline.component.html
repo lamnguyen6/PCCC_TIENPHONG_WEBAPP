@@ -1,0 +1,9 @@
+
+<ng-container [ngSwitch]="elType">
+    <ng-container *ngSwitchDefault>
+        {{ hotline }}
+    </ng-container>
+    <ng-container *ngSwitchCase="'hyperlink'">
+        <a (click)="xxx()" href="tel:{{ hotline }}">{{ hotline }}</a>
+    </ng-container>
+</ng-container>

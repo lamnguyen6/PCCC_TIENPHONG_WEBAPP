@@ -5,17 +5,18 @@ import { CustomerServiceDetailsPageComponent } from './customer-service-details-
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutPageModule } from '../layout-page/layout-page.module';
 import { ShareModule } from '../share/share.module';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
 	{
 		path: '',
 		component: CustomerServicesPageComponent,
-		data: { animation: 'Product' },
+		data: { animation: 'CS' },
 	},
 	{
 		path: ':id',
 		component: CustomerServiceDetailsPageComponent,
-		data: { animation: 'Product' },
+		data: { animation: 'CS' },
 	},
 ];
 
@@ -29,6 +30,7 @@ const routes: Routes = [
     CommonModule,
     LayoutPageModule,
 	ShareModule,
+	MatIconModule,
   ]
 })
 export class CustomerServicesModule { }

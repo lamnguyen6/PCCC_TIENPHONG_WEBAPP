@@ -2,25 +2,8 @@
 @import "src/scss/mixins";
 
 :host {
-    .cs-details-page {
-        ::ng-deep h3 {
-            font: unset;
-            color: var(--color-black);
-            font-weight: 700;
-            font-size: 16px;
-            @include desktop {
-                font-size: 20px;
-            }
-        }
-        ::ng-deep p {
-            text-align: justify;
-            font: unset;
-            color: var(--color-black-light);
-            font-weight: 300;
-            font-size: 14px;
-        }
-    }
     .cs-details {
+        &-page {}
         position: relative;
         ::ng-deep {
             h3 {

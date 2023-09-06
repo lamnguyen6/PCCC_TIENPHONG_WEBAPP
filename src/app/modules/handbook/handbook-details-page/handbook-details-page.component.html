@@ -1,0 +1,18 @@
+<p>handbook-details-page works!</p>
+<app-layout-full-page>
+    <div class="handbook-details-page">
+        <div class="container">
+            <ng-container *ngIf="item; else notFound">
+                <div class="app-breadcrumb">
+                    <a [routerLink]="['']">Trang chủ</a><span>/</span><a [routerLink]="['/cam-nang-pccc']">Cẩm nang PCCC</a><span>/</span><p>{{ item.name }}</p> 
+                </div>
+                <div class="handbook-details">
+                    <div class="post-details" [innerHTML]="item.content"></div>
+                </div>
+            </ng-container>
+            <ng-template #notFound>
+                <p class="not-found">Dịch vụ quý khách tìm kiếm không có kết quả. <a [routerLink]="['/dich-vu']">Quay lại trang dịch vụ</a></p>
+            </ng-template>
+        </div>
+    </div>
+</app-layout-full-page>

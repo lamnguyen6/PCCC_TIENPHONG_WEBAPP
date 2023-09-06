@@ -11,7 +11,10 @@ export class HelperService {
   ) { }
 
   copyToClipBoard(text: string) {
-    navigator.clipboard.writeText(text);
+    if (text && text.toString().trim()) {
+      navigator.clipboard.writeText(text);
+      this.snackBar('Đã sao chép');
+    }
   }
   snackBar(message: string, status: boolean = true) {
     this.snackbar.open(message, 'Đóng', { panelClass: status ? 'snack-success' : 'snack-error' });

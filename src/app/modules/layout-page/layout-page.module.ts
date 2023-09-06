@@ -4,6 +4,7 @@ import { FullPageComponent } from './full-page/full-page.component';
 import { HeaderModule } from '../header/header.module';
 import { FooterModule } from '../footer/footer.module';
 import { FloatingContentModule } from '../floating-content/floating-content.module';
+import { ShareModule } from '../share/share.module';
 
 
 
@@ -16,6 +17,7 @@ import { FloatingContentModule } from '../floating-content/floating-content.modu
     HeaderModule,
     FooterModule,
     FloatingContentModule,
+    ShareModule,
   ],
   exports: [
     FullPageComponent

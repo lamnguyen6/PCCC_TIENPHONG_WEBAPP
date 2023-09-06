@@ -4,6 +4,7 @@ import { FooterComponent } from './footer.component';
 import {MatIconModule} from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { ContactModule } from '../contact/contact.module';
+import { ShareModule } from '../share/share.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ContactModule } from '../contact/contact.module';
     CommonModule,
     RouterModule,
     MatIconModule,
+    ShareModule,
   ],
   exports: [
     FooterComponent,

@@ -1,0 +1,16 @@
+<app-layout-full-page>
+    <div class="handbook-page">
+        <div class="container">
+            <div class="app-breadcrumb">
+                <a [routerLink]="['']">Trang chủ</a><span>/</span><p>Cẩm nang PCCC</p> 
+            </div>
+            <div class="handbook-list">
+                <ng-container *ngFor="let item of handbookList">
+                    <div class="handbook-item">
+                        <app-card [dataItem]="item"></app-card>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</app-layout-full-page>

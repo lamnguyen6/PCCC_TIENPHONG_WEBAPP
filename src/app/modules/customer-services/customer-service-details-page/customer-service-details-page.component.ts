@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CsItem } from '../customerServices.interface';
 import { CustomerServicesService } from '../customer-services.service';
 import { ActivatedRoute } from '@angular/router';
@@ -6,7 +6,8 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-customer-service-details-page',
   templateUrl: './customer-service-details-page.component.html',
-  styleUrls: ['./customer-service-details-page.component.scss']
+  styleUrls: ['./customer-service-details-page.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CustomerServiceDetailsPageComponent implements OnInit {
   item: CsItem;

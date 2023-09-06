@@ -12,18 +12,18 @@
         </div>
         <div class="contact-2 d-desktop">
             <mat-icon aria-hidden="false" fontIcon="perm_phone_msg"></mat-icon>
-            <a href="tel:+84976839054">Phòng kinh doanh: <span color="primary">0976 839 054</span></a>
+            <a>Phòng kinh doanh: <span color="primary"><app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline></span></a>
             <a href="#"><span color="primary">ctytienphongtq@gmail.com</span></a>
         </div>
         <div class="contact-3 d-device">
             <mat-icon aria-hidden="false" fontIcon="perm_phone_msg"></mat-icon>
-            <a href="tel:+84976839054">Phòng kinh doanh: <span color="primary">0976 839 054</span></a>
-            <a href="tel:+84976839054">Hỗ trợ kỹ thuật: <span color="primary">0976 839 054</span></a>
+            <a>Phòng kinh doanh: <span color="primary"><app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline></span></a>
+            <a>Hỗ trợ kỹ thuật: <span color="primary"><app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline></span></a>
             <a href="#"><span color="primary">ctytienphongtq@gmail.com</span></a>
         </div>
         <div class="contact-4 d-desktop">
             <mat-icon aria-hidden="false" fontIcon="perm_phone_msg"></mat-icon>
-            <a href="tel:+84976839054">Hỗ trợ kỹ thuật: <span color="primary">0976 839 054</span></a>
+            <a>Hỗ trợ kỹ thuật: <span color="primary"><app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline></span></a>
             <a href="#"><span color="primary">ctytienphongtq@gmail.com</span></a>
         </div>
         <a href="javascript:void(0)" (click)="toggleMobileMenuFlag = !toggleMobileMenuFlag" class="menu-mobile-btn d-device">
@@ -41,7 +41,7 @@
                     <li><a [routerLink]="['/thiet-bi-pccc']">sản phẩm</a></li>
                     <li><a [routerLink]="['/dich-vu']">dịch vụ</a></li>
                     <li><a [routerLink]="['/lien-he']">liên hệ</a></li>
-                    <li><a [routerLink]="['']">cẩm nang pccc</a></li>
+                    <li><a [routerLink]="['/cam-nang-pccc']">cẩm nang pccc</a></li>
                 </ul>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     <li><a [routerLink]="['/thiet-bi-pccc']">sản phẩm</a></li>
                     <li><a [routerLink]="['/dich-vu']">dịch vụ</a></li>
                     <li><a [routerLink]="['/lien-he']">liên hệ</a></li>
-                    <li><a [routerLink]="['']">cẩm nang pccc</a></li>
+                    <li><a [routerLink]="['/cam-nang-pccc']">cẩm nang pccc</a></li>
                 </ul>
             </div>
             <div class="menu-mobile__bottom"></div>

@@ -17,7 +17,8 @@
                         <li><h3>Bộ phận kinh doanh</h3></li>
                         <li>
                             <span><mat-icon aria-hidden="false" fontIcon="stay_current_portrait"></mat-icon></span>
-                            <a href="tel:0976839054">(+84) 97 683 9054</a>
+                            <app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline>
+                            
                         </li>
                         <li>
                             <span><mat-icon aria-hidden="false" fontIcon="email"></mat-icon></span>
@@ -26,7 +27,7 @@
                         <li><h3>Hỗ trợ kỹ thuật</h3></li>
                         <li>
                             <span><mat-icon aria-hidden="false" fontIcon="stay_current_portrait"></mat-icon></span>
-                            <a href="tel:0976839054">(+84) 97 683 9054</a>
+                            <app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline>
                         </li>
                         <li>
                             <span><mat-icon aria-hidden="false" fontIcon="email"></mat-icon></span>

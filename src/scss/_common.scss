@@ -285,3 +285,86 @@ button {
         font-size: 20px;
     }
 }
+.post-details {
+    h3 {
+        font: unset;
+        color: var(--color-black);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        margin: 30px 0;
+        @include desktop {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+    .images{
+        @include flexAJ(center, center);
+        margin: 30px 0;
+        gap: 20px;
+        .image {
+            width: calc(50% - 10px);
+        }
+    }
+    .image{
+        margin: 0 auto;
+        position: relative;
+        // padding-bottom: 30px;
+        width: fit-content;
+        @include box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.4));
+        img {
+            @include box-shadow(none);
+            @include border-radius(0);
+        }
+        i {
+            text-align: center;
+            display: block;
+            width: 100%;
+            position: absolute;
+            line-height: 30px;
+            left: 0;
+            bottom: 0;
+            font-size: 13px;
+            color: var(--color-black-light);
+            font-weight: 300;
+            background: var(--color-quote-bg);
+        }
+    }
+    img {
+        cursor: pointer;
+        display: block;
+        max-height: 400px;
+        max-width: 100%;
+        object-fit: contain;
+        @include border-radius(10px);
+        margin: 30px auto;
+        @include box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.4));
+    }
+    p {
+        text-align: justify;
+        font: unset;
+        color: var(--color-black-light);
+        font-weight: 300;
+        font-size: 14px;
+        b {
+            margin: 20px 0;
+            font-weight: 700;
+        }
+    }
+    ul {
+        li {
+            padding-left: 30px;
+            position: relative;
+            &:before {
+                content: "\2022";
+                font-family: 'Roboto', sans-serif;
+                color: var(--color-black-light);
+                font-weight: 200;
+                font-size: 14px;
+                position: absolute;
+                top: 0;
+                left: 10px;
+            }
+        }
+    }
+}

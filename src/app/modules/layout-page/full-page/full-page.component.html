@@ -29,10 +29,11 @@
         </app-access-button>
     </div>
     <div class="access-btn-call">
-        <app-access-button [tooltip]="{ content: 'Liên hệ trực tiếp', pos: 'right' }">
+        <app-access-button [appCall]="'hotline'" [tooltip]="{ content: 'Liên hệ trực tiếp', pos: 'right' }">
             <ng-container content>
-                <a class="access-call" href="tel:+84976839054">
-                    <img src="/assets/images/contact/call.png" alt="0976839054">
+                <a class="access-call">
+                    <!-- <app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline> -->
+                    <img src="/assets/images/contact/call.png" alt="Hotline">
                 </a>
             </ng-container>
         </app-access-button>

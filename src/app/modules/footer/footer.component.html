@@ -14,7 +14,7 @@
                 <li><a [routerLink]="['/thiet-bi-pccc']">sản phẩm</a></li>
                 <li><a [routerLink]="['/dich-vu']">dịch vụ</a></li>
                 <li><a [routerLink]="['/lien-he']">liên hệ</a></li>
-                <li><a [routerLink]="['']">cẩm nang pccc</a></li>
+                <li><a [routerLink]="['/cam-nang-pccc']">cẩm nang pccc</a></li>
             </ul>
         </div>
         <div class="company-info">
@@ -23,7 +23,7 @@
                 <li><span>Chức vụ</span><span>Giám đốc</span></li>
                 <li>
                     <span><mat-icon aria-hidden="false" fontIcon="stay_current_portrait"></mat-icon></span>
-                    <a href="tel:0976839054">(+84) 97 683 9054</a>
+                    <app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline>
                 </li>
                 <li>
                     <span><mat-icon aria-hidden="false" fontIcon="location_on"></mat-icon></span>

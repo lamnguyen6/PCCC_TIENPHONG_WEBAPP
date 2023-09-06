@@ -10,9 +10,9 @@ export interface CsItem {
     tags: Array<string>;
     content: string;
     thumbnailContent: string;
-    coverImage?: string;
     thumbnailImage?: string;
     icons?: Array<string>;
+    images?: Array<string>;
 }
 export interface CsCard {
     id: any;

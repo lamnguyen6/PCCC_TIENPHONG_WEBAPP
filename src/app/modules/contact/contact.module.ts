@@ -8,6 +8,7 @@ import { FooterModule } from '../footer/footer.module';
 import { FormModule } from '../form/form.module';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutPageModule } from '../layout-page/layout-page.module';
+import { ShareModule } from '../share/share.module';
 
 const routes: Routes = [
   {
@@ -28,6 +29,7 @@ const routes: Routes = [
     FormModule,
     MatIconModule,
     LayoutPageModule,
+    ShareModule,
   ],
 })
 export class ContactModule { }
