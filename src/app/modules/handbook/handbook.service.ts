@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SideMenuItem } from '../customer-services/customerServices.interface';
+import { app } from '../share/app.utils';
 
 @Injectable({
   providedIn: 'root'
@@ -70,8 +71,8 @@ export class HandbookService {
           <p>LIÊN Hệ VỚI CHÚNG TÔI:</p>
           <ul>
             <li><a [routerLink]="['']">CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</a></li>
-            <li>Địa chỉ: </li>
-            <li>Điện thoại: <app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline> – <app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline></li>
+            <li>Địa chỉ: ${ app.address }</li>
+            <li>Điện thoại: <a href="tel:${ app.call.hotline }">${ app.call.hotline }</a> - <a href="tel: ${ app.call.support }">${ app.call.support }</a></li>
           </ul>
         </div>
       `,
@@ -132,8 +133,8 @@ export class HandbookService {
           <p>LIÊN Hệ VỚI CHÚNG TÔI:</p>
           <ul>
               <li><a [routerLink]="['']">CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</a></li>
-              <li>Địa chỉ: </li>
-              <li>Điện thoại: <app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline> – <app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline></li>
+              <li>Địa chỉ: ${ app.address }</li>
+              <li>Điện thoại: <a href="tel:${ app.call.hotline }">${ app.call.hotline }</li>
           </ul>
         </div>
       `,
@@ -191,8 +192,8 @@ export class HandbookService {
             <p>LIÊN Hệ VỚI CHÚNG TÔI:</p>
             <ul>
                 <li><a [routerLink]="['']">CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</a></li>
-                <li>Địa chỉ: </li>
-                <li>Điện thoại: <app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline> – <app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline></li>
+                <li>Địa chỉ: ${ app.address }</li>
+                <li>Điện thoại: <a href="tel:${ app.call.hotline }">${ app.call.hotline }</li>
             </ul>
         </div>
       `,

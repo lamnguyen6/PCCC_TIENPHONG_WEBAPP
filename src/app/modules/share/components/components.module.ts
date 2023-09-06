@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { HotlineComponent } from './hotline/hotline.component';
 import { CallDirective } from './hotline/call.directive';
+import { AddressComponent } from './address/address.component';
 
 
 
@@ -13,6 +14,7 @@ import { CallDirective } from './hotline/call.directive';
     CardComponent,
     HotlineComponent,
     CallDirective,
+    AddressComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { CallDirective } from './hotline/call.directive';
     CardComponent,
     HotlineComponent,
     CallDirective,
+    AddressComponent,
   ]
 })
 export class ComponentsModule { }
