@@ -9,7 +9,6 @@ export class CallDirective {
   @Input('appCall') call: string = 'hotline';
   @Input('copyToClipBoard') copyToClipBoard: boolean = false;
   @HostListener('click', ['$event']) onClick(e: any) {
-    console.log(`yo`);
     if (this.copyToClipBoard == true) {
       this.helper.copyToClipBoard(this.hotline);
     }
