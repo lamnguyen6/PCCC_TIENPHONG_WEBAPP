@@ -4,6 +4,7 @@ interface SideMenuItem {
     id: any;
     name: any;
     group: string;
+    groupName: string;
 }
 @Injectable({
   providedIn: 'root'
@@ -387,13 +388,23 @@ export class ProductService {
     return id ? item : null;
   }
   getSideMenuList(): Array<SideMenuItem> {
-    return this.PRODUCTS.map(({ id, name }) => ({ id, name, group: 'Sản phẩm' }));
+    return this.PRODUCTS.map(({ id, name }) => ({ id, name, group: 'product', groupName: 'Sản phẩm' }));
   }
   searchProduct(phrase: string): Array<Product> {
-    return this.PRODUCTS.filter(item => {
-      let joinTags = item.tags.join('+').toLowerCase().trim();
-      return joinTags.includes(phrase.toLowerCase().trim());
+    let list:Array<Product> = [];
+    this.PRODUCTS.forEach((item: Product) => {
+        if (item) {
+            let joinTags = item.tags.join('+').toLowerCase().trim();
+            if (joinTags.includes(phrase.toLowerCase().trim())) {
+                if (item.id.toLowerCase().includes('pisafe')) {
+                    list.unshift(item);
+                } else {
+                    list.push(item);
+                }
+            }
+        }
     });
+    return list;
   }
   _productcard(product: Product): ProductCard {
     return {

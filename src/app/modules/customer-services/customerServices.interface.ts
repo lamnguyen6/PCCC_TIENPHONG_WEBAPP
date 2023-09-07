@@ -2,6 +2,7 @@ export interface SideMenuItem {
     id: any;
     name: any;
     group: string;
+    groupName: string;
 }
 export interface CsItem {
     id: any;

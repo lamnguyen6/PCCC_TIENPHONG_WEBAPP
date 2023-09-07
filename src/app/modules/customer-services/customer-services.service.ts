@@ -96,7 +96,7 @@ export class CustomerServicesService {
     return id ? item : null;
   }
   getSideMenuList(): Array<SideMenuItem> {
-    return this.CS.map(({ id, name }) => ({ id, name, group: 'Dịch vụ' }));
+    return this.CS.map(({ id, name }) => ({ id, name, group: 'cs', groupName: 'Dịch vụ' }));
   }
   searchCs(phrase: string = ''): Array<CsItem> {
     return this.CS.filter(item => {

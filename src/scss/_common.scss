@@ -264,15 +264,22 @@ button {
 .app-breadcrumb {
     @include border-radius(8px);
     @include flexAJ(flex-end, flex-start);
-    padding: 16px;
     margin: 20px 0;
+    padding: 10px 16px;
     background: var(--color-quote-bg);
+    @include desktop {
+        padding: 16px;
+    }
     > * {
         letter-spacing: 1px;
-        font-weight: 700;
+        font-weight: 400;
         color: var(--color-black-light);
-        font-size: 16px;
+        font-size: 13px;
         line-height: 1;
+        @include desktop {
+            font-weight: 700;
+            font-size: 16px;
+        }
     }
     a {
         color: var(--color-primary);
@@ -282,7 +289,6 @@ button {
     }
     span {
         margin: 0 10px;
-        font-size: 20px;
     }
 }
 .post-details {

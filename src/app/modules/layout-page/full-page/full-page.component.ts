@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { HelperService } from 'src/app/services/helper.service';
+import { app } from '../../share/app.utils';
 
 @Component({
   selector: 'app-layout-full-page',
@@ -8,18 +7,18 @@ import { HelperService } from 'src/app/services/helper.service';
   styleUrls: ['./full-page.component.scss']
 })
 export class FullPageComponent implements OnInit, AfterViewInit {
+  appFB: string = app.social.fb;
   stickyHeader: boolean = false;
   protected pageH: any;
   protected viewH = window.innerHeight;
   @HostListener('window:scroll', ['$event']) onscroll() {
-    this.stickyHeader = this._stickyheader();
+      this.stickyHeader = this._stickyheader();
   }
   constructor(
     private el: ElementRef,
   ) { }
   ngAfterViewInit(): void {
     this.pageH = Number(this.el.nativeElement.querySelector('.layout').offsetHeight) || window.innerHeight;
-    this.stickyHeader = this._stickyheader();
   }
   ngOnInit(): void {
   }

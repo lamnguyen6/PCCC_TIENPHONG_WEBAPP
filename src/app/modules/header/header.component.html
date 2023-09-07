@@ -52,7 +52,10 @@
         <div class="backdrop" (click)="toggleMobileMenuFlag = false"></div>
         <div class="menu-mobile__wrap">
             <div class="menu-mobile__top">
-                <div class="logo-mini"><a href="#">PCCC TienPhong</a></div>
+                <!-- <div class="logo-mini"><a href="#">PCCC TienPhong</a></div> -->
+                <div class="logo">
+                    <a [routerLink]="['']"><img src="/assets/images/logo/logo.png" alt="Tien Phong PCCC"></a>
+                </div>
                 <div class="close-btn" (click)="toggleMobileMenuFlag = false"></div>
             </div>
             <div class="menu-mobile__content">

@@ -10,32 +10,31 @@
     </div>
 </div>
 <div class="access-btn">
-    <div class="access-btn-zalo">
-        <app-access-button [tooltip]="{ content: 'Kết nối qua Zalo', pos: 'right' }">
+    <a class="access-btn-zalo">
+        <app-access-button [appCall]="'hotline'" [tooltip]="{ content: 'Kết nối qua Zalo', pos: 'right' }">
             <ng-container content>
-                <a class="access-zalo" href="tel:+84976839054">
-                    <img src="/assets/images/contact/zalo.png" alt="0976839054">
+                <a class="access-zalo">
+                    <img src="/assets/images/contact/zalo.png" alt="zalo">
                 </a>
             </ng-container>
         </app-access-button>
-    </div>
-    <div class="access-btn-fb">
+    </a>
+    <a class="access-btn-fb" href="{{ appFB }}" target="_blank">
         <app-access-button [tooltip]="{ content: 'Facebook', pos: 'right' }">
             <ng-container content>
-                <a class="access-fb" href="tel:+84976839054">
+                <a class="access-fb">
                     f
                 </a>
             </ng-container>
         </app-access-button>
-    </div>
-    <div class="access-btn-call">
+    </a>
+    <a class="access-btn-call">
         <app-access-button [appCall]="'hotline'" [tooltip]="{ content: 'Liên hệ trực tiếp', pos: 'right' }">
             <ng-container content>
                 <a class="access-call">
-                    <!-- <app-hotline [call]="'hotline'" [elType]="'hyperlink'"></app-hotline> -->
                     <img src="/assets/images/contact/call.png" alt="Hotline">
                 </a>
             </ng-container>
         </app-access-button>
-    </div>
+    </a>
 </div>

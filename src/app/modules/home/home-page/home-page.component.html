@@ -9,13 +9,13 @@
                 <div class="section-wrap">
                     <div class="left-section d-desktop">
                         <ul class="list-of-services">
-                            <ng-container *ngFor="let group of sideMenu | groupBy: 'group'; let i = index">
+                            <ng-container *ngFor="let group of sideMenu | groupBy: 'groupName'; let i = index">
                                 <li class="category"><a href="#">{{ group.key }}</a></li>
                                 <ng-container *ngFor="let item of group.value">
-                                    <ng-container *ngIf="i == 0">
+                                    <ng-container *ngIf="group.value[0] && group.value[0]['group'] === 'product'">
                                         <li><a [routerLink]="['/thiet-bi-pccc', item.id]">{{ item.name }}</a></li>
                                     </ng-container>
-                                    <ng-container *ngIf="i == 1">
+                                    <ng-container *ngIf="group.value[0] && group.value[0]['group'] === 'cs'">
                                         <li><a [routerLink]="['/dich-vu', item.id]">{{ item.name }}</a></li>
                                     </ng-container>
                                 </ng-container>
