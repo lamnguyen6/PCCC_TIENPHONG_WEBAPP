@@ -8,6 +8,7 @@ import { app } from '../../share/app.utils';
 })
 export class FullPageComponent implements OnInit, AfterViewInit {
   appFB: string = app.social.fb;
+  appZalo: string = `https://zalo.me/g/${ app.call.hotline }`;
   stickyHeader: boolean = false;
   protected pageH: any;
   protected viewH = window.innerHeight;

@@ -10,8 +10,8 @@
     </div>
 </div>
 <div class="access-btn">
-    <a class="access-btn-zalo">
-        <app-access-button [appCall]="'hotline'" [tooltip]="{ content: 'Kết nối qua Zalo', pos: 'right' }">
+    <a class="access-btn-zalo" href="{{ appZalo }}" target="_blank">
+        <app-access-button [tooltip]="{ content: 'Kết nối qua Zalo', pos: 'right' }">
             <ng-container content>
                 <a class="access-zalo">
                     <img src="/assets/images/contact/zalo.png" alt="zalo">

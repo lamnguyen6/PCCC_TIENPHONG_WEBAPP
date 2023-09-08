@@ -39,7 +39,10 @@
         @include --flex(0, 0, auto);
         a {
             img {
-                width: 100px;
+                width: 60px;
+                @include desktop {
+                    width: 100px;
+                }
             }
         }
     }
@@ -50,16 +53,16 @@
     .menu-mobile-btn {
         position: relative;
         margin-right: 0;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 28px;
         background-color: var(--color-black-light);
         @include flexAJ(center, center);
         @include --flexDir(column);
         @include border-radius(5px);
         span {
             background-color: var(--color-white);
-            width: 25px;
-            height: 3px;
+            width: 15px;
+            height: 2px;
             margin-bottom: 3px;
             &:last-of-type {
                 margin-bottom: 0;
@@ -73,7 +76,7 @@
                 padding: 10px 20px;
                 a {
                     font-size: 16px;
-                    font-weight: 900;
+                    font-weight: 700;
                     text-transform: uppercase;
                     letter-spacing: 2px;
                     color: var(--color-white);

@@ -50,7 +50,7 @@ export class HomeBannerComponent implements OnInit, AfterViewInit {
       slidesPerView: 'auto',
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 3000,
       },
       speed: 500,
       injectStyles: [

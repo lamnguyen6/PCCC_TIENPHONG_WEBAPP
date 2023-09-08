@@ -15,12 +15,12 @@ export class ProductService {
         id: 'binh-chua-chay-bot',
         name: 'Bình chữa cháy bột',
         images: [
-            '/assets/images/products/binh-chua-chay-bot/binh-bot-pccc-bc-mfz35_pccc-ha-noi.jpg',
-            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-4kg.jpg',
-            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-6kg.jpg',
-            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-8kg.jpg',
-            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-9kg.jpg',
-            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-35kg.jpg',
+            '/assets/images/products/binh-chua-chay-bot/binh-bot-pccc-bc-mfz35_pccc-ha-noi.png',
+            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-4kg.png',
+            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-6kg.png',
+            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-8kg.png',
+            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-9kg.png',
+            '/assets/images/products/binh-chua-chay-bot/binh-chua-chay-tomoken-xach-tay-bot-abc-35kg.png',
         ],
         categories: 'binh-chua-chay-bot',
         tags: ['binh-chua-chay-bot', 'binh-chua-chay', 'thiet-bi-pccc'],
@@ -39,10 +39,10 @@ export class ProductService {
         id: 'binh-chua-chay-co2',
         name: 'Bình chữa cháy CO2',
         images: [
-            '/assets/images/products/binh-chua-chay-co2/binh-chua-chay-tomoken-xach-tay-co2-3kg.jpg',
-            '/assets/images/products/binh-chua-chay-co2/binh-chua-chay-tomoken-xach-tay-co2-5kg.jpg',
-            '/assets/images/products/binh-chua-chay-co2/binh-cuu-hoa-khi-co2-mt5_pccc-ha-noi.jpg',
-            '/assets/images/products/binh-chua-chay-co2/binh-cuu-hoa-khi-co2-mt24.jpg',
+            '/assets/images/products/binh-chua-chay-co2/binh-chua-chay-tomoken-xach-tay-co2-3kg.png',
+            '/assets/images/products/binh-chua-chay-co2/binh-chua-chay-tomoken-xach-tay-co2-5kg.png',
+            '/assets/images/products/binh-chua-chay-co2/binh-cuu-hoa-khi-co2-mt5_pccc-ha-noi.png',
+            '/assets/images/products/binh-chua-chay-co2/binh-cuu-hoa-khi-co2-mt24.png',
         ],
         categories: 'binh-chua-chay-co2',
         tags: ['binh-chua-chay-co2', 'binh-chua-chay', 'thiet-bi-pccc'],
@@ -57,7 +57,7 @@ export class ProductService {
         id: 'bo-tieu-lenh',
         name: 'Bộ tiêu lệnh',
         images: [
-            '/assets/images/products/bo-tieu-lenh/bo-tieu-lenh.jpg',
+            '/assets/images/products/bo-tieu-lenh/bo-tieu-lenh.png',
         ],
         categories: 'bo-tieu-lenh',
         tags: ['bo-tieu-lenh', 'thiet-bi-pccc'],
@@ -137,10 +137,10 @@ export class ProductService {
         id: 'hop-cuu-hoa',
         name: 'Hộp cứu hỏa',
         images: [
-            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-1.jpg',
-            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-2.jpg',
-            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-3.jpg',
-            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-4.jpg',
+            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-1.png',
+            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-2.png',
+            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-3.png',
+            '/assets/images/products/hop-cuu-hoa/hop-cuu-hoa-4.png',
         ],
         categories: 'hop-cuu-hoa',
         tags: ['hop-cuu-hoa', 'thiet-bi-pccc'],
@@ -157,16 +157,16 @@ export class ProductService {
         id: 'may-bom-pccc',
         name: 'Máy bơm PCCC',
         images: [
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-ebara-FS_pccc-ha-noi.jpg',
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-ebara-FSSA-100-80_pccc-ha-noi.jpg',
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-hieu-pentax-CA32-160_pccc-ha-noi.jpg',
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-hieu-tohatsu-V75FS_pccc-ha-noi.jpg',
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-Hyundai-DHYC50LE_pccc-ha-noi.jpg',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-ebara-FS_pccc-ha-noi.png',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-ebara-FSSA-100-80_pccc-ha-noi.png',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-hieu-pentax-CA32-160_pccc-ha-noi.png',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-hieu-tohatsu-V75FS_pccc-ha-noi.png',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-Hyundai-DHYC50LE_pccc-ha-noi.png',
             '/assets/images/products/may-bom-pccc/may-bom-pccc-rabbit-p555-s_pccc-ha-noi.png',
             '/assets/images/products/may-bom-pccc/may-bom-pccc-sealand-K150_pccc-ha-noi.png',
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-shibaura-TF520MH_pccc-ha-noi.jpg',
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-tohatsu-V20DS_pccc-ha-noi-0.jpg',
-            '/assets/images/products/may-bom-pccc/may-bom-pccc-tohatsu-V85BS_pccc-ha-noi.jpg',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-shibaura-TF520MH_pccc-ha-noi.png',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-tohatsu-V20DS_pccc-ha-noi-0.png',
+            '/assets/images/products/may-bom-pccc/may-bom-pccc-tohatsu-V85BS_pccc-ha-noi.png',
         ],
         categories: 'may-bom-pccc',
         tags: ['may-bom-pccc', 'thiet-bi-pccc'],
@@ -361,12 +361,12 @@ export class ProductService {
         id: 'quan-ao-bhld',
         name: 'Quần áo bảo hộ lao động',
         images: [
-            '/assets/images/products/quan-ao-bhld/m12.jpg',
-            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-9.jpg',
-            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-10.jpg',
-            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-15.jpg',
-            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-19.jpg',
-            '/assets/images/products/quan-ao-bhld/quan-ao-vai-2721-phoi-mau-2.jpg',
+            '/assets/images/products/quan-ao-bhld/m12.png',
+            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-9.png',
+            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-10.png',
+            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-15.png',
+            '/assets/images/products/quan-ao-bhld/quan-ao-dep-net-19.png',
+            '/assets/images/products/quan-ao-bhld/quan-ao-vai-2721-phoi-mau-2.png',
         ],
         categories: 'quan-ao-bhld',
         tags: ['quan-ao-bhld', 'thiet-bi-pccc'],
@@ -388,23 +388,28 @@ export class ProductService {
     return id ? item : null;
   }
   getSideMenuList(): Array<SideMenuItem> {
-    return this.PRODUCTS.map(({ id, name }) => ({ id, name, group: 'product', groupName: 'Sản phẩm' }));
+    return this.PRODUCTS.sort((a: Product, b: Product) => {
+        return this._sortproducts(a, b);
+    }).map(({ id, name }) => ({ id, name, group: 'product', groupName: 'Sản phẩm' }));
   }
   searchProduct(phrase: string): Array<Product> {
-    let list:Array<Product> = [];
-    this.PRODUCTS.forEach((item: Product) => {
-        if (item) {
-            let joinTags = item.tags.join('+').toLowerCase().trim();
-            if (joinTags.includes(phrase.toLowerCase().trim())) {
-                if (item.id.toLowerCase().includes('pisafe')) {
-                    list.unshift(item);
-                } else {
-                    list.push(item);
-                }
-            }
-        }
+    let list: Array<Product> = this.PRODUCTS.filter(item => {
+        let joinTags = item.tags.join('+').toLowerCase().trim();
+        return joinTags.includes(phrase.toLowerCase().trim());
     });
-    return list;
+    if (list.length) {
+        return list.sort((a: Product, b: Product) => {
+            return this._sortproducts(a, b);
+        });
+    }
+    return [];
+  }
+  private _sortproducts(a: Product, b: Product) {
+    let greaterA = a.id.toLowerCase().includes('pisafe');
+    let greaterB = b.id.toLowerCase().includes('pisafe');
+    if (greaterA && !greaterB) return -1;
+    if (!greaterA && greaterB) return 1;
+    return 0;
   }
   _productcard(product: Product): ProductCard {
     return {

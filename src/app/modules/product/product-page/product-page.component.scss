@@ -13,11 +13,14 @@
             gap: $gap;
             .card {
                 width: calc((100% - $gap) / 2);
-                @include desktop {
+                @include tablet {
                     width: calc((100% - ($gap * 2)) / 3);
                 }
-                @include lg-desktop {
+                @include desktop {
                     width: calc((100% - ($gap * 3)) / 4);
+                }
+                @include lg-desktop {
+                    width: calc((100% - ($gap * 4)) / 5);
                 }
             }
         }

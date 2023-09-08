@@ -8,17 +8,24 @@
             </ng-container>
         </swiper-container>
     </div>
-    <div class="pagination">
-        <swiper-container #pagingSwiperRef init="false">
-            <ng-container *ngFor="let item of datasrc; let i = index">
-                <swiper-slide>
-                    <div class="pagination-btn">
-                        <img [src]="item['img']" alt="{{ item['name'] }}">
-                    </div>
-                </swiper-slide>
-            </ng-container>
-        </swiper-container>
-        <button class="swiper-button-prev"></button>
-        <button class="swiper-button-next"></button>
-    </div>
+    <ng-container *ngIf="needPaging; else defaultPaging">
+        <div class="pagination">
+            <swiper-container #pagingSwiperRef init="false">
+                <ng-container *ngFor="let item of datasrc; let i = index">
+                    <swiper-slide>
+                        <div class="pagination-btn">
+                            <img [src]="item['img']" alt="{{ item['name'] }}">
+                        </div>
+                    </swiper-slide>
+                </ng-container>
+            </swiper-container>
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+        </div>
+    </ng-container>
+    <ng-template #defaultPaging>
+        <div class="default-pagination">
+            <img [src]="datasrc[0]['img']" alt="{{ datasrc[0]['name'] }}">
+        </div>
+    </ng-template>
 </div>

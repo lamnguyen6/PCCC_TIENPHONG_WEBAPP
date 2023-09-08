@@ -12,19 +12,31 @@ import Swiper, { SwiperOptions } from 'swiper';
 })
 export class ProductDetailsSliderComponent implements OnInit, AfterViewInit {
   @Input('datasrc') datasrc: Array<any> = [];
-  @ViewChild('mainSwiperRef', { static: true })
+  @ViewChild('mainSwiperRef', { static: false })
   protected _mainSwiperRef: ElementRef | undefined;
   mainSwiper?: Swiper;
-  @ViewChild('pagingSwiperRef', { static: true })
+  @ViewChild('pagingSwiperRef', { static: false })
   protected _pagingSwiperRef: ElementRef | undefined;
   pagingSwiper?: Swiper;
+  /*
+    using ngIf=needPaging to fix (trick) paging swiper with slidesPerView: auto not rendering properly, by not rendering it on view
+    trade by @ViewChild { static: true } advantages.
+    find another solution!
+  */
+  needPaging: boolean = true;
   constructor() { }
-
   ngOnInit(): void {
+    this.needPaging = this.datasrc && this.datasrc.length > 1;
   }
   ngAfterViewInit() {
+    this._drawSwipers();
+  }
+
+  private _drawSwipers() {
     this._initMainSwiper();
-    this._initPagingSwiper();
+    if (this.needPaging) {
+      this._initPagingSwiper();
+    }
   }
   
   private _initMainSwiper() {
@@ -69,11 +81,10 @@ export class ProductDetailsSliderComponent implements OnInit, AfterViewInit {
     this.pagingSwiper = this._pagingSwiperRef!.nativeElement.swiper;
     this.pagingSwiper?.slides[0].classList.add(activeSlideCls);
   
-    this.pagingSwiper!.off('click'); // Avoid multiple subscription, in case you wish to call the `_initSwiper()` multiple time
-    this.pagingSwiper!.on('click', swiper => { // Any change subscription you wish
-      const activeIndex = swiper.activeIndex;
+    this.pagingSwiper!.off('click');
+    this.pagingSwiper!.on('click', swiper => {
       const clickedIndex = swiper.clickedIndex;
-      // set active slide for paging
+      // set active slide for paging swiper
       for (let i = 0; i < swiper.slides.length; i++) {
         if (i === clickedIndex) {
           swiper.slides[i].classList.add(activeSlideCls);
@@ -82,7 +93,7 @@ export class ProductDetailsSliderComponent implements OnInit, AfterViewInit {
         }
       }
       swiper.activeIndex = clickedIndex;
-      // set active slide for main
+      // slide main swiper accordingly
       this.mainSwiper?.slideTo(Number(clickedIndex));
     });
   }
