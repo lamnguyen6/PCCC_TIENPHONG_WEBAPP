@@ -2,6 +2,7 @@ import { trigger, transition, query, style, group, animate, keyframes } from '@a
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {register} from 'swiper/element/bundle';
+import { app } from './modules/share/app.utils';
 
 export const appear = trigger('routeAnimations', [
 	transition('* <=> *', [
@@ -42,6 +43,13 @@ export class AppComponent {
   constructor() {
 	// swiper element v9 register
 	register();
+	app.isDevice = navigator.userAgent.match(/Android/i)
+	|| navigator.userAgent.match(/webOS/i)
+	|| navigator.userAgent.match(/iPhone/i)
+	|| navigator.userAgent.match(/iPad/i)
+	|| navigator.userAgent.match(/iPod/i)
+	|| navigator.userAgent.match(/BlackBerry/i)
+	|| navigator.userAgent.match(/Windows Phone/i) ? true : false;
   }
 
   ngOnInit(): void { }

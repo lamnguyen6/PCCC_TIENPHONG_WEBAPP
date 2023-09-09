@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import Swiper, { SwiperOptions } from 'swiper';
+import { app } from '../../share/app.utils';
 
 @Component({
   selector: 'app-product-details-slider',
@@ -34,17 +35,20 @@ export class ProductDetailsSliderComponent implements OnInit, AfterViewInit {
   }
 
   zoom(e:any, item: any) {
-    this.zoomImg = true;
-    var zoomer = e.currentTarget;
-    let offsetX;
-    let offsetY;
-    let x;
-    let y;
-    e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX;
-    e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX;
-    x = offsetX/zoomer.offsetWidth*100;
-    y = offsetY/zoomer.offsetHeight*100;
-    zoomer.style.backgroundPosition = x + '% ' + y + '%';
+    if (!app.isDevice) {
+      this.zoomImg = true;
+      var zoomer = e.currentTarget;
+      let offsetX;
+      let offsetY;
+      let x;
+      let y;
+      offsetX = e.offsetX ? e.offsetX : e.touches && e.touches[0].pageX ? e.touches[0].pageX : 100;
+      offsetY = e.offsetY ? e.offsetY : e.touches && e.touches[0].pageY ? e.touches[0].pageY : 100;
+      // e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX;
+      x = offsetX/zoomer.offsetWidth*100;
+      y = offsetY/zoomer.offsetHeight*100;
+      zoomer.style.backgroundPosition = x + '% ' + y + '%';
+    }
   }
   zoomout(e: any) {
     this.zoomImg = false;
