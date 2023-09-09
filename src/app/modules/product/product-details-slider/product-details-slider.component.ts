@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import Swiper, { SwiperOptions } from 'swiper';
 
 @Component({
@@ -24,12 +24,30 @@ export class ProductDetailsSliderComponent implements OnInit, AfterViewInit {
     find another solution!
   */
   needPaging: boolean = true;
+  zoomImg: boolean = false;
   constructor() { }
   ngOnInit(): void {
     this.needPaging = this.datasrc && this.datasrc.length > 1;
   }
   ngAfterViewInit() {
     this._drawSwipers();
+  }
+
+  zoom(e:any, item: any) {
+    this.zoomImg = true;
+    var zoomer = e.currentTarget;
+    let offsetX;
+    let offsetY;
+    let x;
+    let y;
+    e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX;
+    e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX;
+    x = offsetX/zoomer.offsetWidth*100;
+    y = offsetY/zoomer.offsetHeight*100;
+    zoomer.style.backgroundPosition = x + '% ' + y + '%';
+  }
+  zoomout(e: any) {
+    this.zoomImg = false;
   }
 
   private _drawSwipers() {

@@ -1,4 +1,5 @@
 export const app = {
+    isDevice: false,
     call: {
         hotline: '0819114114',
         support: '0976839054',

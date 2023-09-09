@@ -1,6 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { trigger, transition, query, style, group, animate, keyframes } from '@angular/animations';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { animate, group, keyframes, query, style, transition, trigger } from "@angular/animations";
 import {register} from 'swiper/element/bundle';
 
 export const appear = trigger('routeAnimations', [

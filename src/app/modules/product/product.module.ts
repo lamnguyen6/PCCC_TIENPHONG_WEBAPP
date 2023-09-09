@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductDetailsPageComponent } from './product-details-page/product-details-page.component';
-import { RouterModule, Routes } from '@angular/router';
 import { LayoutPageModule } from '../layout-page/layout-page.module';
 import { MatIconModule } from '@angular/material/icon';
 import { ProductDetailsSliderComponent } from './product-details-slider/product-details-slider.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 	{

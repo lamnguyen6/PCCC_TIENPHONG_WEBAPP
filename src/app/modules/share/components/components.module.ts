@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HotlineComponent } from './hotline/hotline.component';
 import { CallDirective } from './hotline/call.directive';
 import { AddressComponent } from './address/address.component';
+import { ZoomImageComponent } from './zoom-image/zoom-image.component';
 
 
 
@@ -15,6 +16,7 @@ import { AddressComponent } from './address/address.component';
     HotlineComponent,
     CallDirective,
     AddressComponent,
+    ZoomImageComponent,
   ],
   imports: [
     CommonModule,
