@@ -4,10 +4,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'groupBy'
 })
 export class GroupByPipe implements PipeTransform {
-  transform(collection: any[], property: string): any[] {
+  transform(collection: any[], property: string = ''): any[] {
     // prevents the application from breaking if the array of objects doesn't exist yet
     if(!collection) {
-      return null as any;
+      return [];
     }
 
     const groupedCollection = collection.reduce((previous, current)=> {
