@@ -57,27 +57,59 @@
     }
     .company-intro {
         a {
+            color: var(--color-black-light);
             img {
                 width: 60px;
             }
         }
-        a + p {
+        b {
+            font-weight: 400;
+        }
+        a + div {
+            margin-top: 10px;
             font-size: 16px;
             font-weight: 300;
             margin-bottom: 3px;
-        }
-        p {
-            b {
-                font-weight: 400;
-            }
-            &:nth-child(2) {
-                margin-top: 10px;
-            }
-            &:nth-child(3) {
-                margin-top: 10px;
-                margin-bottom: 30px;
+            p {
+                margin-top: 5px;
+                @include flexAJ(center, center);
+                @include --flexWrap(wrap);
+                text-align: center;
+                color: var(--color-black-light);
                 font-size: 14px;
+                font-weight: 300;
+                @include lg-desktop {
+                    @include --flexJ(flex-start);
+                    padding-left: 4px;
+                }
+                span {
+                    display: block;
+                    position: relative;
+                    margin: 5px 10px;
+                    line-height: 1.1;
+                    &::before, &:after {
+                        content: '';
+                        position: absolute;
+                        @include border-radius(50%);
+                        width: 2px;
+                        height: 2px;
+                        background-color: var(--color-black-light);
+                        top: calc(50% - 1px);
+                    }
+                    &::before {
+                        left: -11px;
+                    }
+                    &::after {
+                        right: -11px;
+                    }
+                }
             }
+        }
+        a + div + p {
+            color: var(--color-black-light);
+            margin-top: 10px;
+            margin-bottom: 30px;
+            font-size: 14px;
         }
     }
     .page-routes {
@@ -95,6 +127,7 @@
         }
     }
     .company-info {
+        @include flexAJ(flex-start, center);
         li {
             margin-bottom: 8px;
             &:not(&:first-child) {
@@ -112,6 +145,7 @@
                 &:last-child {
                     flex: 1;
                     display: block;
+                    text-align: left;
                 }
             }
         }

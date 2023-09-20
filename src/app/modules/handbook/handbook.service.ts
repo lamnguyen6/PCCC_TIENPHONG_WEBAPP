@@ -15,7 +15,7 @@ export class HandbookService {
       content: `
         <h3>Địa chỉ bán thiết bị phòng cháy chữa cháy tại Tuyên Quang</h3>
         <p>Những thiết bị phòng cháy chữa cháy rất cần thiết cho hộ gia đình, cho công ty, nhà xưởng, chung cư cao tầng, trường học… Chúng là những thiết bị sinh ra có vai trò rất quan trọng chính là cảnh báo sự cố cháy nổ nghiêm trọng cho con người biết, thiết bị chữa cháy bao gồm bình chữa cháy, cuộn vòi chữa cháy…có mục đích dập tắc đám cháy mới phát sinh giảm nguy cơ thiệt hại về tài sản cũng như tính mạng của con người</p>
-        <p><a [routerLink]="['/']">PCCC Tiên Phong</a> chính là địa chỉ bán thiết bị phòng cháy chữa cháy uy tín chất lượng nhất tại Tuyên Quang và các tỉnh phía bắc, chúng tôi nhập khẩu chính hãng các thiết bị PCCC, khách hàng mua hàng tại đây sẽ được các chuyên viên tư vấn mọi thắc mắc, mua hàng nhanh chóng, giá cả hợp lý, nhận nhiều ưu đãi từ công ty chúng tôi</p>
+        <p><a href="https://pccctienphong.vn">PCCC Tiên Phong</a> chính là địa chỉ bán thiết bị phòng cháy chữa cháy uy tín chất lượng nhất tại Tuyên Quang và các tỉnh phía bắc, chúng tôi nhập khẩu chính hãng các thiết bị PCCC, khách hàng mua hàng tại đây sẽ được các chuyên viên tư vấn mọi thắc mắc, mua hàng nhanh chóng, giá cả hợp lý, nhận nhiều ưu đãi từ công ty chúng tôi</p>
         <p><b>Tầm quan trọng của thiết bị phòng cháy chữa cháy trong đời sống</b></p>
         <p>Cháy nổ ngày nay ngày càng xuất hiện nhiều, đặc biệt là mùa nắng nóng. Việc sử dụng các thiết bị PCCC trong đời sống con người sẽ hạn chế được các rủi ro tiềm ẩn cháy nổ xung quanh ta. Mỗi thiết bị cứu hỏa sẽ có những công dụng riêng để đảm nhận những nhiệm vụ với múc đích thông báo và dập tắt đám cháy ngay lập tức.</p>
         <p>Việc trang bị các thiết bị phòng cháy chữa cháy và nghiêm túc lắng nghe hướng dẫn, tập thực hành sử dụng các thiết bị phòng cháy chữa cháy là điều vô cùng quan trọng. Dưới đây là danh sách một số thiết bị phòng cháy chữa cháy cơ bản và cần thiết được các cơ quan chức năng khuyến cáo nên lắp đặt tại nhà, tại cửa hàng và các cơ quan làm việc của bạn:</p>
@@ -56,7 +56,7 @@ export class HandbookService {
         </ul>
         <p><i>*Tùy vào số lượng và thương hiệu sẽ có báo giá khác nhau</i></p>
         <p><b>Công ty bán thiết bị phòng cháy chữa cháy chất lượng cao địa chỉ tại Tuyên Quang</b></p>
-        <p>Trên địa bàn Tuyên Quang có rất nhiều công ty bán thiết bị pccc cho nên có sự cạnh tranh rất cao. Sự khác biệt khi quý khách hàng chọn PCCC Tiên Phong là đơn vị cung cấp thiết bị phòng cháy chữa cháy cho công trình của bạn là:</p>
+        <p>Trên địa bàn Tuyên Quang có rất nhiều công ty bán thiết bị pccc cho nên có sự cạnh tranh rất cao. Sự khác biệt khi quý khách hàng chọn <a href="https://pccctienphong.vn">PCCC Tiên Phong</a> là đơn vị cung cấp thiết bị phòng cháy chữa cháy cho công trình của bạn là:</p>
         <ul>
             <li>Được chuyên viên tư vấn miễn phí, giải đáp mọi thắc mắc cũng như đưa ra phương án lựa chọn thiết bị phòng cháy chữa cháy tốt cho quý khách dễ sử dụng phù hợp với túi tiền và công trình thi công.</li>
             <li>Có giấy phép kiểm định theo yêu cầu, có đầy đủ CO-CQ </li>
@@ -126,13 +126,13 @@ export class HandbookService {
         </div>
         <p>Khi phát hiện nguy cơ cháy nổ, hệ thống báo động sẽ được kích hoạt, lập tức quay số và gửi tin nhắn đến các số điện thoại thành viên cơ sở. Đồng thời, hệ thống cũng tự động điều phối tín hiệu báo động đến trung tâm chỉ huy của cảnh sát trên địa bàn.</p>
         <p>Trên bản đồ giám sát của trung tâm sẽ hiển thị thông tin chi tiết của cơ sở: địa chỉ, sơ đồ thiết kế, giao thông, nguồn nước,…hỗ trợ tối đa các chiến sĩ lên phương án CC-CHCN nhanh chóng, hiệu quả.</p>
-        <p><a [routerLink]="['/']">Công ty PCCC Tiên Phong</a> tự hào là đại lý phân phối chính hãng các sản phẩm của Pisafe tại Tuyên Quang và toàn miền Bắc.</p>
+        <p><a href="https://pccctienphong.vn">Công ty PCCC Tiên Phong</a> tự hào là đại lý phân phối chính hãng các sản phẩm của Pisafe tại Tuyên Quang và toàn miền Bắc.</p>
         <p><i>=>> Nhanh tay đặt mua ngay để nhận được cảnh báo cháy nổ kịp thời, bảo vệ an toàn cho gia đình và tài sản của bạn!</i></p>
         <div class="pane">
-          <p><b><a [routerLink]="['']">Công ty PCCC Tiên Phong</a> tự hào là đại lý phân phối chính hãng các sản phẩm của Pisafe tại Tuyên Quang và toàn miền Bắc.</b></p>
+          <p><b><a href="https://pccctienphong.vn">Công ty PCCC Tiên Phong</a> tự hào là đại lý phân phối chính hãng các sản phẩm của Pisafe tại Tuyên Quang và toàn miền Bắc.</b></p>
           <p>LIÊN Hệ VỚI CHÚNG TÔI:</p>
           <ul>
-              <li><a [routerLink]="['']">CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</a></li>
+              <li><a href="https://pccctienphong.vn">CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</a></li>
               <li>Địa chỉ: ${ app.address }</li>
               <li>Điện thoại: <a href="tel:${ app.call.hotline }">${ app.call.hotline }</li>
           </ul>

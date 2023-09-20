@@ -267,6 +267,7 @@ button {
 .app-breadcrumb {
     @include border-radius(8px);
     @include flexAJ(flex-end, flex-start);
+    @include --flexWrap(wrap);
     margin: 20px 0;
     padding: 10px 16px;
     background: var(--color-quote-bg);
@@ -278,7 +279,7 @@ button {
         font-weight: 400;
         color: var(--color-black-light);
         font-size: 13px;
-        line-height: 1;
+        line-height: 1.2;
         @include desktop {
             font-weight: 700;
             font-size: 16px;
@@ -326,11 +327,12 @@ button {
             @include border-radius(0);
         }
         i {
+            padding: 5px 10px;
             text-align: center;
             display: block;
             width: 100%;
             position: absolute;
-            line-height: 30px;
+            line-height: 15px;
             left: 0;
             bottom: 0;
             font-size: 13px;
@@ -342,9 +344,11 @@ button {
     img {
         cursor: pointer;
         display: block;
+        min-height: 120px;
         max-height: 400px;
         max-width: 100%;
         object-fit: contain;
+        object-position: top;
         @include border-radius(10px);
         margin: 30px auto;
         @include box-shadow(0 0 10px 0 rgba(0, 0, 0, 0.4));

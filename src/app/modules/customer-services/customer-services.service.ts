@@ -15,9 +15,12 @@ export class CustomerServicesService {
       tags: ['thi-cong-lap-dat', 'dich-vu', 'cung-cap-thiet-bi', 'vat-tu-pccc'],
       content: `
         <h3>Cung cấp thiết bị, vật tư PCCC & thi công lắp đặt hệ thống PCCC</h3>
-        <img class="cover-img" src="/assets/images/cs/cs1-1.png" alt="Cung cấp thiết bị, tư vấn các giải pháp cho hệ thống PCCC đáp ứng các tiêu chuẩn của BCA">
-        <p>Công ty TNHH Xây dựng và PCCC Tiên Phong chuyên cung cấp các thiết bị đảm bảo an toàn phòng cháy chữa cháy cho các cơ sở công cộng, doanh nghiệp, nhà ở và các công trình xây dựng tại tỉnh Tuyên Quang và các tỉnh miền núi phía Bắc của Việt Nam. Đây là một ngành nghề có tính quan trọng cao, đảm bảo sự an toàn của người và tài sản trong trường hợp xảy ra hỏa hoạn.</p>
-        <p>Tiên Phong có vai trò cung cấp các thiết bị và vật tư liên quan đến phòng cháy chữa cháy, bao gồm:</p>
+        <div class="image">
+          <img src="/assets/images/cs/cs1-1.png" alt="Cung cấp thiết bị, tư vấn các giải pháp cho hệ thống PCCC đáp ứng các tiêu chuẩn của BCA">
+          <i>Cung cấp thiết bị, tư vấn giải pháp, thi công lắp đặt</i>
+        </div>
+        <p><a href="https://pccctienphong.vn">Công ty TNHH Xây dựng và PCCC Tiên Phong</a> chuyên cung cấp các thiết bị đảm bảo an toàn phòng cháy chữa cháy cho các cơ sở công cộng, doanh nghiệp, nhà ở và các công trình xây dựng tại tỉnh Tuyên Quang và các tỉnh miền núi phía Bắc của Việt Nam. Đây là một ngành nghề có tính quan trọng cao, đảm bảo sự an toàn của người và tài sản trong trường hợp xảy ra hỏa hoạn.</p>
+        <p><a href="https://pccctienphong.vn">Tiên Phong</a> có vai trò cung cấp các thiết bị và vật tư liên quan đến phòng cháy chữa cháy, bao gồm:</p>
         <ul>
           <li><p>Thiết bị chữa cháy: Các loại bình chữa cháy, hệ thống chữa cháy tự động và bằng tay, máy bơm nước chữa cháy, thiết bị phun bọt xịt foam, hệ thống phun sương nước chữa cháy, thiết bị phun khí CO2, v.v.</p></li>
           <li><p>Vật tư phòng cháy chữa cháy: Dây cứu hộ, áo bảo hộ cháy, mũ bảo hiểm, bình oxy tự động, áo tập luyện phòng cháy chữa cháy, v.v.</p></li>
@@ -41,9 +44,12 @@ export class CustomerServicesService {
       tags: ['tu-van-thiet-ke', 'giam-sat-he-thong', 'dich-vu', 'cung-cap-thiet-bi', 'vat-tu-pccc'],
       content: `
         <h3>Tư vấn thiết kế, giám sát hệ thống PCCC và hệ thống báo cháy thông minh</h3>
-        <img class="cover-img" src="/assets/images/cs/cs2-4.png" alt="Tư vấn thiết kế, giám sát hệ thống PCCC và hệ thống báo cháy thông minh">
-        <p>Công ty TNHH Xây dựng và PCCC Tiên Phong cung cấp dịch vụ tư vấn, thiết kế và giám sát các hệ thống phòng cháy chữa cháy (PCCC) cùng hệ thống báo cháy thông minh cho các công trình xây dựng, cơ sở công cộng, doanh nghiệp và nhà ở tại tỉnh Tuyên Quang và các tỉnh miền núi phía Bắc của Việt Nam. Đây là lĩnh vực rất quan trọng nhằm đảm bảo an toàn trong trường hợp xảy ra hỏa hoạn và các tình huống nguy hiểm liên quan đến cháy nổ.</p>
-        <p>Công ty Tiên Phong thực hiện các hoạt động sau trong lĩnh vực này:</p>
+        <div class="image">
+          <img src="/assets/images/cs/cs2-4.png" alt="Tư vấn thiết kế, giám sát hệ thống PCCC và hệ thống báo cháy thông minh">
+          <i>Tư vấn thiết kế, giám sát hệ thống PCCC và hệ thống báo cháy thông minh</i>
+        </div>
+        <p><a href="https://pccctienphong.vn">Công ty TNHH Xây dựng và PCCC Tiên Phong</a> cung cấp dịch vụ tư vấn, thiết kế và giám sát các hệ thống phòng cháy chữa cháy (PCCC) cùng hệ thống báo cháy thông minh cho các công trình xây dựng, cơ sở công cộng, doanh nghiệp và nhà ở tại tỉnh Tuyên Quang và các tỉnh miền núi phía Bắc của Việt Nam. Đây là lĩnh vực rất quan trọng nhằm đảm bảo an toàn trong trường hợp xảy ra hỏa hoạn và các tình huống nguy hiểm liên quan đến cháy nổ.</p>
+        <p><a href="https://pccctienphong.vn">Tiên Phong</a> thực hiện các hoạt động sau trong lĩnh vực này:</p>
         <ul>
           <li><p>Tư vấn và phân tích: Công ty tư vấn với khách hàng để hiểu rõ yêu cầu cụ thể của họ, từ đó xác định các giải pháp phù hợp cho hệ thống PCCC và hệ thống báo cháy thông minh. Điều này bao gồm việc đánh giá nguy cơ cháy và xác định các yếu tố cần thiết để bảo vệ tối ưu.</p></li>
           <li><p>Thiết kế hệ thống: Công ty tiến hành thiết kế chi tiết hệ thống PCCC và hệ thống báo cháy thông minh dựa trên yêu cầu của khách hàng và các quy định, tiêu chuẩn an toàn liên quan. Điều này bao gồm xác định vị trí lắp đặt các thiết bị, cảm biến, hệ thống cảnh báo và các yếu tố liên quan khác.</p></li>
@@ -68,9 +74,12 @@ export class CustomerServicesService {
       tags: ['tu-van-thiet-ke', 'thi-cong-xay-dung', 'dich-vu', 'cung-cap-thiet-bi', 'vat-tu-pccc'],
       content: `
         <h3>Tư vấn thiết kế và thi công xây dựng</h3>
-        <img class="cover-img" src="/assets/images/cs/cs3-1.png" alt="Tư vấn thiết kế - Thi công xây dựng">
-        <p>Công ty TNHH Xây dựng và PCCC Tiên Phong cung cấp dịch vụ tư vấn, thiết kế và thực hiện các công trình xây dựng, bao gồm cả công trình liên quan đến phòng cháy chữa cháy (PCCC), tại tỉnh Tuyên Quang và các tỉnh miền núi phía Bắc của Việt Nam. Lĩnh vực này đảm bảo rằng các công trình được xây dựng đáp ứng đầy đủ các yêu cầu kỹ thuật, an toàn và thiết kế estetik.</p>
-        <p>Công ty Tiên Phong thực hiện các hoạt động sau trong lĩnh vực này:</p>
+        <div class="image">
+          <img src="/assets/images/cs/cs3-1.png" alt="Tư vấn thiết kế - Thi công xây dựng">
+          <i>Tư vấn thiết kế - Thi công xây dựng</i>
+        </div>
+        <p><a href="https://pccctienphong.vn">Công ty TNHH Xây dựng và PCCC Tiên Phong</a> cung cấp dịch vụ tư vấn, thiết kế và thực hiện các công trình xây dựng, bao gồm cả công trình liên quan đến phòng cháy chữa cháy (PCCC), tại tỉnh Tuyên Quang và các tỉnh miền núi phía Bắc của Việt Nam. Lĩnh vực này đảm bảo rằng các công trình được xây dựng đáp ứng đầy đủ các yêu cầu kỹ thuật, an toàn và thiết kế estetik.</p>
+        <p><a href="https://pccctienphong.vn">Tiên Phong</a> thực hiện các hoạt động sau trong lĩnh vực này:</p>
         <ul>
             <li><p>Tư vấn và phân tích: Công ty tư vấn với khách hàng để hiểu rõ yêu cầu của họ, từ đó xác định các giải pháp phù hợp cho việc thiết kế và thi công xây dựng. Điều này bao gồm việc đánh giá các yếu tố liên quan như mục tiêu sử dụng, quy mô, ngân sách, và các yêu cầu kỹ thuật đặc thù.</p></li>
             <li><p>Thiết kế kiến trúc và kỹ thuật: Công ty thực hiện thiết kế kiến trúc và kỹ thuật dựa trên yêu cầu và mong muốn của khách hàng. Điều này bao gồm việc tạo ra các bản vẽ thiết kế, định hình cấu trúc, mô hình không gian và các yếu tố thiết kế khác.</p></li>
