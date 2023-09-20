@@ -1,0 +1,10 @@
+@import "src/scss/responsive";
+@import "src/scss/mixins";
+
+app-handbook-details-page {
+    .post-details {
+        ul {
+            margin-bottom: 12px;
+        }
+    }
+}

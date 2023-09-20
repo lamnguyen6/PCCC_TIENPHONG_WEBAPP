@@ -24,7 +24,9 @@
                 }
                 .right-section {
                     @include --flex(1, 1, 1);
-                    padding: 0 10px;
+                    @include desktop {
+                        padding: 0 10px;
+                    }
                 }
             }
         }
@@ -42,6 +44,13 @@
                     font-weight: 400;
                     padding: 10px 20px;
                     
+                }
+                &.category {
+                    &:hover {
+                        a {
+                            color: var(--color-primary-dark);
+                        }
+                    }
                 }
                 &:not(.category) {
                     background-color: var(--color-primary);
@@ -86,8 +95,40 @@
         .about-us {
             text-align: justify;
             h3 {
+                text-align: center;
+                color: var(--color-black-light);
                 a {
                     color: var(--color-black);
+                    font-weight: 600;
+                }
+                p {
+                    @include flexAJ(center, center);
+                    @include --flexWrap(wrap);
+                    text-align: center;
+                    color: var(--color-black-light);
+                    font-size: 14px;
+                    font-weight: 300;
+                    span {
+                        display: block;
+                        position: relative;
+                        margin: 5px 10px;
+                        line-height: 1.1;
+                        &::before, &:after {
+                            content: '';
+                            position: absolute;
+                            @include border-radius(50%);
+                            width: 2px;
+                            height: 2px;
+                            background-color: var(--color-black-light);
+                            top: calc(50% - 1px);
+                        }
+                        &::before {
+                            left: -11px;
+                        }
+                        &::after {
+                            right: -11px;
+                        }
+                    }
                 }
             }
             p {

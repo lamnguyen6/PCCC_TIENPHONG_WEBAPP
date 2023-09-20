@@ -7,13 +7,18 @@
                     <div class="left-section d-desktop">
                         <ul class="list-of-services">
                             <ng-container *ngFor="let group of sideMenu | groupBy: 'groupName'; let i = index">
-                                <li class="category"><a href="#">{{ group.key }}</a></li>
-                                <ng-container *ngFor="let item of group.value">
-                                    <ng-container *ngIf="group.value[0] && group.value[0]['group'] === 'product'">
-                                        <li><a [routerLink]="['/thiet-bi-pccc', item.id]">{{ item.name }}</a></li>
+                                <ng-container [ngSwitch]="group.value[0]['group']">
+                                    <ng-container *ngSwitchCase="'product'">
+                                        <li class="category"><a [routerLink]="['/thiet-bi-pccc']">{{ group.key }}</a></li>
+                                        <ng-container *ngFor="let item of group.value">
+                                            <li><a [routerLink]="['/thiet-bi-pccc', item.id]">{{ item.name }}</a></li>
+                                        </ng-container>
                                     </ng-container>
-                                    <ng-container *ngIf="group.value[0] && group.value[0]['group'] === 'cs'">
-                                        <li><a [routerLink]="['/dich-vu', item.id]">{{ item.name }}</a></li>
+                                    <ng-container *ngSwitchCase="'cs'">
+                                        <li class="category"><a [routerLink]="['/dich-vu']">{{ group.key }}</a></li>
+                                        <ng-container *ngFor="let item of group.value">
+                                            <li><a [routerLink]="['/dich-vu', item.id]">{{ item.name }}</a></li>
+                                        </ng-container>
                                     </ng-container>
                                 </ng-container>
                             </ng-container>
@@ -24,16 +29,19 @@
                             <app-home-banner #mainBannerCmp></app-home-banner>
                         </div>
                         <div class="about-us">
-                            <h3><a href="#">CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</a> - Giải Pháp An Toàn Chuyên Nghiệp</h3>
+                            <h3 class="tac">
+                                <a [routerLink]="['']">CÔNG TY TNHH XÂY DỰNG VÀ PHÒNG CHÁY CHỮA CHÁY TIÊN PHONG</a>
+                                <p><span>Tiên phong</span><span>An toàn</span><span>Chuyên nghiệp</span><span>Hiện đại</span></p>
+                            </h3>
                             <p>
-                                <a color="primary" href="#">PCCC Tiên Phong</a> 
+                                <a color="primary" [routerLink]="['']">PCCC Tiên Phong</a> 
                                 là một công ty chuyên cung cấp trang thiết bị phòng cháy chữa cháy uy tín, 
                                 được thành lập vào năm 2023 và có trụ sở tại thành phố Tuyên Quang, Việt Nam. 
-                                <span class="d-desktop">Với cam kết đảm bảo an toàn cho cộng đồng, <a color="primary" href="#">Tiên Phong</a> 
+                                <span class="d-desktop">Với cam kết đảm bảo an toàn cho cộng đồng, <a color="primary" [routerLink]="['']">Tiên Phong</a> 
                                 đã nhanh chóng xây dựng mục tiêu trở thành tổng kho cung cấp vật tư phòng cháy chữa 
                                 cháy cho toàn bộ khu vực Tây Bắc, Việt Nam.</span>
                             </p>
-                            <p class="d-desktop">Tầm nhìn của <a color="primary" href="#">PCCC Tiên Phong</a> 
+                            <p class="d-desktop">Tầm nhìn của <a color="primary" [routerLink]="['']">PCCC Tiên Phong</a> 
                                 là trở thành <span><b>một đơn vị hàng đầu trong lĩnh vực 
                                     phòng cháy chữa cháy, mang đến những giải pháp an toàn chuyên nghiệp, 
                                     hiệu quả và đáng tin cậy cho các khách hàng và đối tác</b></span>. 
