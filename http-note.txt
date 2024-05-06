@@ -1,0 +1,70 @@
+export class MessageComponent implements OnInit {
+	inbox$: any;
+	queryInboxTriggerObs: BehaviorSubject<any> = new BehaviorSubject('');
+	queryInboxTrigger$ = this.queryInboxTriggerObs.asObservable();
+	constructor(
+		private readonly userHttp: HttpUserService,
+		private providerService: ProviderService,
+	) { }
+
+	ngOnInit() {
+		const queryInbox$ = this.userHttp.requestWithLoading(this.userHttp.searchUserMessage({}), 3e3, 5e3).pipe(
+			map(res => {
+				if (res.type === 'finish') {
+					return { ...res, value: this.prepareDataInbox(res.value) }
+				} else {
+					return res;
+				}
+			}),
+		);
+		this.inbox$ = this.queryInboxTrigger$.pipe(exhaustMap(() => queryInbox$));
+
+		this.loadInbox();
+	}
+	loadInbox() {
+		this.queryInboxTriggerObs.next('');
+	}
+	onLoadInboxClick() {
+		this.loadInbox();
+	}
+	selectedIndexChange(idx: number) {
+		switch (idx) {
+			case 0:
+				this.loadInbox();
+				break;
+		
+			default:
+				break;
+		}
+	}
+	prepareDataInbox(data: any) {
+		if (!data) return [];
+		if (!data['reslist'] || data['reslist'].length === 0) return [];
+
+		return data['reslist'].sort((a, b) => {
+			if (a['sendtime'] > b['sendtime']) return 1;
+			if (a['sendtime'] < b['sendtime']) return -1;
+			return 0;
+		});
+	}
+	viewInboxDetailsOnClick(inboxItem: any) {
+		this.userHttp.readMessage({ id: inboxItem.id })
+		.subscribe(
+			res => {
+				if (res.msg) {
+					this.providerService.messageError(res.msg);
+				} else {
+					this.loadInbox();
+					const dataDialog = {
+						type: 2,
+						header: inboxItem.title,
+						message: inboxItem.content,
+						btnOk: 'Đóng',
+					};
+					this.providerService.openDialog(dataDialog);
+				}
+			},
+			err => {}
+		);
+	}
+}
