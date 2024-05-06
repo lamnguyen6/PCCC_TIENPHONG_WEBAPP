@@ -5,6 +5,7 @@ import { HeaderModule } from '../header/header.module';
 import { FooterModule } from '../footer/footer.module';
 import { FloatingContentModule } from '../floating-content/floating-content.module';
 import { ShareModule } from '../share/share.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,6 +14,7 @@ import { ShareModule } from '../share/share.module';
     FullPageComponent
   ],
   imports: [
+    RouterModule,
     CommonModule,
     HeaderModule,
     FooterModule,

@@ -2,6 +2,7 @@
 @import "src/scss/mixins";
 
 :host {
+    background-color: black;
     @keyframes sticky__header {
         from {
             @include transform(translateY(-100%));
@@ -35,6 +36,86 @@
         }
         &-footer {
             @include --flexShrink(0);
+        }
+        @keyframes move-aside {
+            0% {
+                right: 0;
+            }
+            20% {
+                transform: scale(.9);
+            }
+            40% {
+                transform: scale(.9);
+            }
+            100% {
+                right: 250px;
+                transform: scale(.9);
+            }
+        }
+        @keyframes reform {
+            to {
+                right: 0;
+                transform: scale(1);
+            }
+        }
+        &--move-aside {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            z-index: 2000;
+            position: fixed;
+            top: 0;
+            height: 0; // needed
+            border-radius: 10px;
+            overflow: hidden;
+            // transition: cubic-bezier(0.13, 0.13, 0.08, 0.8) .3s;
+            @include animation(move-aside .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards);
+        }
+        &--reform {
+            right: 0;
+            transform: scale(1);
+        }
+    }
+    .side-menu-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-primary);
+        opacity: 0;
+        z-index: -100;
+        ul {
+            width: 80%;
+            margin-left: auto;
+            li {
+                padding: 20px;
+                a {
+                    display: block;
+                    line-height: 20px;
+                    font-size: 16px;
+                    color: var(--color-white);
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    text-align: right;
+                    width: 100%;
+                }
+            }
+        }
+        .logo {
+            opacity: .1;
+            position: fixed;
+            z-index: 1000;
+            top: 50px;
+            right: -450px;
+            width: 800px;
+            height: 600px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &--active {
+            opacity: 1;
+            z-index: 1000;
         }
     }
     ::ng-deep .access-btn {

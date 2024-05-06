@@ -26,11 +26,16 @@
             <a>Hỗ trợ kỹ thuật: <span color="primary"><app-hotline [call]="'support'" [elType]="'hyperlink'"></app-hotline></span></a>
             <a href="#"><span color="primary">ctytienphongtq@gmail.com</span></a>
         </div>
-        <a href="javascript:void(0)" (click)="toggleMobileMenuFlag = !toggleMobileMenuFlag" class="menu-mobile-btn d-device">
+        <a href="javascript:void(0)" (click)="toggleMobileMenuOnClick()" class="menu-mobile-btn d-device">
             <span></span>
             <span></span>
             <span></span>
         </a>
+        <!-- <a href="javascript:void(0)" (click)="toggleMobileMenuFlag = !toggleMobileMenuFlag" class="menu-mobile-btn d-device">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a> -->
     </div>
     <div class="header-section2 d-desktop">
         <div class="nav">

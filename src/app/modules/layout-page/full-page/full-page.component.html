@@ -1,4 +1,4 @@
-<div class="layout">
+<div class="layout" [ngClass]="{ 'layout--move-aside': showSideMenuMobile === true, 'layout--reform': showSideMenuMobile === false  }">
     <div class="layout-content">
         <div class="layout-header" (scroll)="onscroll()" [ngClass]="{ 'sticky-header': stickyHeader }">
             <app-header></app-header>
@@ -9,6 +9,21 @@
         <app-footer></app-footer>
     </div>
 </div>
+<ng-container *ngIf="showSideMenuMobile">
+    <div class="side-menu-mobile" [ngClass]="{ 'side-menu-mobile--active': showSideMenuMobile }">
+        <ul>
+            <li><a class="fadeInLeft" (click)="routingMobileOnClick('')">trang chủ</a></li>
+            <li><a class="fadeInLeft" (click)="routingMobileOnClick('/gioi-thieu')">giới thiệu</a></li>
+            <li><a class="fadeInLeft" (click)="routingMobileOnClick('/thiet-bi-pccc')">sản phẩm</a></li>
+            <li><a class="fadeInLeft" (click)="routingMobileOnClick('/dich-vu')">dịch vụ</a></li>
+            <li><a class="fadeInLeft" (click)="routingMobileOnClick('/lien-he')">liên hệ</a></li>
+            <li><a class="fadeInLeft" (click)="routingMobileOnClick('/cam-nang-pccc')">cẩm nang pccc</a></li>
+        </ul>
+        <div class="logo fadeInLeft">
+            <img src="/assets/images/logo/logo.png" alt="PCCC Tien Phong">
+        </div>
+    </div>
+</ng-container>
 <div class="access-btn">
     <a class="access-btn-zalo" href="{{ appZalo }}" target="_blank">
         <app-access-button [tooltip]="{ content: 'Kết nối qua Zalo', pos: 'right' }">
